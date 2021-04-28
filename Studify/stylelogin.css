@@ -1,14 +1,17 @@
 .form-container {
-<<<<<<< HEAD
-    background-image: url('img/mac.png');
-=======
-    background-image: url("img/mac.png") ;
->>>>>>> db3d85344e42c144147c19fa470b0cc06aca3582
+    background-image: url('img/back.png');
     padding : 30px;
     border-radius:10px; 
     box-shadow: 0px 0px 10px 0px #000;
-
-    
-
-
 }
+
+.row {
+    display:flex;     
+    justify-content: center;     
+    align-content: center;
+}
+
+.text-center {
+    background-image: url('img/mac.png');
+}
+

@@ -14,7 +14,7 @@
     <body class="text-center">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
             <div class="container-fluid">
-                <a class ="navbar-brand" href="#"><img src="img/logo_small.png"></a>
+                <a class ="navbar-brand" href="index.html"><img src="img/logo_small.png" height="75" alt loading="lazy"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarReponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -36,23 +36,36 @@
         
             </div>
         </nav>
-        <form class="form-container" method="POST" action="/php/registra.php">
-            <h1> Accedi </h1>
-            <br>
-            <input type="text" id="username" name="username" maxlength="50" placeholder="Nome Utente" required>
-            <br>
-            <br>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <br>
-            <br>
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <br>
-            <br>
-            <button class="btn btn-lg btn-primary" name="bottoneRegistrami" type="submit">Log In</button>
-        </form>
-        <li class="nav-item active">    
-            Non hai un account esistente? Allora
-            <a class href="registrazione.html"> registrati! </a>
-    
+        <br>
+        <div class="row">
+            <div class="col-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p class="card-text">
+                    <form class="form-container">
+                        <form method="POST" action="log.php">
+                            <h1> Accedi </h1>
+                            <br>
+                            <input type="text" id="username" name="username" maxlength="50" placeholder="Nome Utente" required>
+                            <br>
+                            <br>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <br>
+                            <br>
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                            <br>
+                            <br>
+                            <button class="btn btn-lg btn-primary" name="bottoneRegistrami" type="submit">Log In</button>
+                            <br>
+                            <br>
+                        </form>
+                    </form>
+                    <li class="nav-item active">    
+                        Non hai un account esistente? Allora
+                        <a class="btn btn-primary" href="registrazione.html"> Registrati! </a>
+                  </p>
+                </div>
+              </div>
+            </div>
     </body>
 </html>
