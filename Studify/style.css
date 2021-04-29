@@ -61,7 +61,7 @@ figure {
 }
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 1rem;
+    padding:1rem;
 }
 
 body{
@@ -73,10 +73,26 @@ body{
   align-items:center;
 }
 
+
 .row {
   align-content: center;
   position: relative;
 }
+
+.card {
+  margin: 1 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 6px; /* Added */
+}
+.bmi {         /*my additional class name -for card*/
+  margin-left: 10%;      
+  margin-right: 10%;
+  margin-top: 5%;
+  width: auto;
+  margin-bottom: 10%;
+  
+}
+
 
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
