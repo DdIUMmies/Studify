@@ -13,35 +13,44 @@
 	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
 </head>
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
-	<div class="container-fluid">
-		<a class ="navbar-brand" href="#"><img src="img/logo_small.png"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-		data-target="#navbarReponsive">
-		<span class="navbar-toggler-icon"></span>
-
-	</button>
-
-	<div class="collapse navbar-collapse" id="collapseResponsive"></div>
-	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
-	<li class="nav-item active ">
-		<a class="nav-link" href="#">Home</a>
-		<li class="nav-item active ">
-			<a class="nav-link " href="#">Supporto</a>
-		<li class="nav-item active ">
-			<a class="nav-link" href="FAQ.html">FAQ</a>
-		<li class="nav-item active ">
-			<a class="nav-link" href="#">Lavora con noi</a>
-        <a class href="registrazione.html" > Registrati </a>
-        <a class href="logIn.html">Accedi</a>
-		
+	<!-- Navigation Bar-->
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
+		<nav class="navbar navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">
+			<img src="img/logo_small.png" height="50" alt="" loading="lazy"/>
+			</a>
+		</div>
+		</nav>
+		<!-- Barra di ricerca -->
+		<form class="form-inline my-2 my-lg-0">
+		<input class="form-control mr-sm-2" type="search" placeholder="Cerca nel sito" aria-label="Search">
+		<button class="btn btn-primary" type="submit">Cerca</button>
+		</form>
+		<!-- Menù -->
+		<div class="collapse navbar-collapse" id="collapseResponsive"></div>
+		<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
+			<li class="nav-item active ">
+				<a class="nav-link" href="index.html">Home</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">Appunti</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+					<a class="dropdown-item" href="#">Informatica</a>
+					<a class="dropdown-item" href="#">Psicologia</a>
+					<a class="dropdown-item" href="#">Economia</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Altre facoltà</a>
+			<li class="nav-item active ">
+				<a class="nav-link" href="FAQ.html">FAQ</a></li>
+			<li class="nav-item active ">
+				<a class="nav-link" href="#">Lavora con noi</a></li>
+			<li class="nav-item active">
+				<a class="btn btn-outline-primary" href="registrazione.html" > Registrati </a></li>
+			<li class="nav-item active">
+				<a class="btn btn-primary" href="logIn.html">Accedi</a></li>
 		</ul>
-
-
-	</div>
-</nav>
+	</nav>
 
 
 
