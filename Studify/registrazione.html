@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" http-equiv="content-type">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Studify</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
     <body class="text-center">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
             <div class="container-fluid">
-                <a class ="navbar-brand" href="#"><img src="img/logo_small.png"></a>
+                <a class ="navbar-brand" href="index.html"><img src="img/logo_small.png" height="75" alt loading="lazy"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarReponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -25,6 +25,15 @@
             <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
             <li class="nav-item active ">
                 <a class="nav-link" href="index.html">Home</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false">Appunti</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+                        <a class="dropdown-item" href="#">Informatica</a>
+                        <a class="dropdown-item" href="#">Psicologia</a>
+                        <a class="dropdown-item" href="#">Economia</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Altre facoltà</a>
                 <li class="nav-item active ">
                     <a class="nav-link " href="#">Supporto</a>
                 <li class="nav-item active ">
@@ -32,30 +41,40 @@
                 <li class="nav-item active ">
                     <a class="nav-link" href="#">Lavora con noi</a>
 
-                
                 </ul>
         
         
             </div>
         </nav>
-        <form class ="form-container">
-        <form method="POST" action="/php/registra.php">
-            <h1> Registrati </h1>
-            <br>
-            <input type="text" id="username" name="username" maxlength="50" placeholder="Nome Utente" required>
-            <br>
-            <br>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <br>
-            <br>
-            <button class="btn btn-lg btn-primary" name="bottoneRegistrami" type="submit">Iscriviti</button>
-        </form>
-        </form>
-        <li class="nav-item active">    
-            Hai già un account? Allora
-            <a class href="logIn.html"> accedi </a>
-
-    
-    
+        <br>
+        <div class="row">
+            <div class="col-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p class="card-text">
+                    <form class ="form-container">
+                        <form method="POST" action="reg.php">
+                            <h1> Registrati </h1>
+                            <input type="text" name="nome" id="nome" placeholder="Nome">
+                            
+                            <input type="cognome" name="cognome" id="cognome" placeholder="Cognome">
+                            
+                            <input type="text" id="username" name="username" maxlength="50" placeholder="Nome Utente" required>
+                            
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                            
+                            <br>
+                            <button class="btn btn-lg btn-primary" name="register" type="submit" >Iscriviti</button>
+                        </form>
+                        </form>
+                        <li class="nav-item active">    
+                            Hai già un account? Allora
+                            <a class="btn btn-primary" href="logIn.html"> Accedi </a>
+                  </p>
+                </div>
+              </div>
+            </div>
     </body>
 </html>
