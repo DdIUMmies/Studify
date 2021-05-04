@@ -31,8 +31,16 @@
   backface-visibility: visible;
 }
 .carousel-inner{
-   height: 400px;
+     height: 400px;
+ }
+.carousel {
+  width: 1050px;
+  height:480px;
+  margin-left: 10%;
+  margin-right: 10%;
+  
 }
+
 
 
 
@@ -71,9 +79,9 @@ figure {
     padding:1rem;
 }
 
-body{
+/*body{
   background-image: url('img/mac.png');
-}
+}*/
 
 .card-text{
   position: relative;
@@ -91,14 +99,7 @@ body{
   float: none; /* Added */
   margin-bottom: 6px; /* Added */
 }
-.bmi {         /*my additional class name -for card*/
-  margin-left: 10%;      
-  margin-right: 10%;
-  margin-top: 5%;
-  width: auto;
-  margin-bottom: 10%;
-  
-}
+
 
 
 /*
