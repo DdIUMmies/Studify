@@ -1,66 +1,39 @@
-<?php
-require_once('database.php');
+<html>
+    <head></head>
+    <body>
+        <?php
+            $dbconn= pg_connect("host=localhost port=5432
+                dbname=StudifyDB
+                user=postgres password=password")
+                or die('Impossibile connettersi: '.pg_last_error());
+            echo "Connessione riuscita.";
 
-if (isset($_POST['register'])) {
-    $username = $_POST['username'] ?? '';
-    $password = $_POST['password'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $nome = $_POST['cognome'] ?? '';
-    $cognome = $_POST['nome'] ?? '';
-    $isUsernameValid = filter_var(
-        $username,
-        FILTER_VALIDATE_REGEXP, [
-            "options" => [
-                "regexp" => "/^[a-z\d_]{3,20}$/i"
-            ]
-        ]
-    );
-    $pwdLenght = mb_strlen($password);
-    
-    if (empty($username) || empty($password)) {
-        $msg = 'Compila tutti i campi %s';
-    } elseif (false === $isUsernameValid) {
-        $msg = 'Lo username non è valido. Sono ammessi solamente caratteri 
-                alfanumerici e l\'underscore. Lunghezza minina 3 caratteri.
-                Lunghezza massima 20 caratteri';
-    } elseif ($pwdLenght < 8 || $pwdLenght > 20) {
-        $msg = 'Lunghezza minima password 8 caratteri.
-                Lunghezza massima 20 caratteri';
-    } else {
-        $password_hash = password_hash($password, PASSWORD_BCRYPT);
-
-        $query = "
-            SELECT id
-            FROM users
-            WHERE username = :username
-        ";
-        
-        $check = $pdo->prepare($query);
-        $check->bindParam(':username', $username, PDO::PARAM_STR);
-        $check->execute();
-        
-        $user = $check->fetchAll(PDO::FETCH_ASSOC);
-        
-        if (count($user) > 0) {
-            $msg = 'Username già in uso %s';
-        } else {
-            $query = "
-                INSERT INTO users
-                VALUES (0, :username, :password)
-            ";
-        
-            $check = $pdo->prepare($query);
-            $check->bindParam(':username', $username, PDO::PARAM_STR);
-            $check->bindParam(':password', $password_hash, PDO::PARAM_STR);
-            $check->execute();
-            
-            if ($check->rowCount() > 0) {
-                $msg = 'Registrazione eseguita con successo';
-            } else {
-                $msg = 'Problemi con l\'inserimento dei dati %s';
+            if (!(isset($_POST["bottoneRegistrami"]))) {
+                header("Location: index.html");
             }
-        }
-    }
-    
-    printf($msg, '<a href="../register.html">torna indietro</a>');
-}
+            else {
+                $email = $_POST['email'];
+                $q1 = "SELECT * from utenti where email=$1";
+                $result = pg_query_params($dbconn, $q1, array($email));
+                if ($line=pg_fetch_array($result, null, PGSQL_ASSOC)) {
+                    echo "<h1> Esiste già un account registrato con questa mail!
+                        <a href=login.html> Clicca qui per accedere! </a>"; 
+                }
+                else {
+                    $nome=$_POST["nome"];
+                    $cognome=$_POST["cognome"];
+                    $password=md5($_POST["password"]);
+                    $username=$_POST["username"];
+                    $q2="INSERT into utente values ($1,$2,$3,$4,$5)";
+                    $data=pg_query_params($q2, array($email,$nome,$cognome,$password,$username));
+
+                    if ($data) {
+                        echo "Registrazione completata.";
+                        echo "<a href=index.html Premi qui </a> per ritornare alla home!.";
+                    }
+
+                }
+            }
+        ?>    
+    </body>
+</html>
