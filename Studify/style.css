@@ -53,7 +53,7 @@ figure {
   height: 100%;
 }
 #fixed {
- /* background-image: url('img/mac.png');*/
+  background-image: url('img/mac.png');
   position: fixed;
   display: block;
   top: 0;
@@ -71,10 +71,25 @@ figure {
     padding:1rem;
 }
 
-body{
-  background-image: url('img/mac.png');
-}
+.jumbotron {
+  background-image: url('/Studify/img/mac.png');
+  background-size: cover;
 
+} 
+
+/*body{
+  background-image: url('img/mac.png');
+
+
+
+}*/
+
+.text-center {
+  text-align: center;
+}
+.images{
+  height: 400;
+}
 .card-text{
   position: relative;
   align-items:center;

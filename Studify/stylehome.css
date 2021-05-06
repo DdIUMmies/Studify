@@ -30,17 +30,65 @@
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
+
 .carousel-inner{
-     height: 400px;
+     height: 500px;
  }
 .carousel {
-  width: 1050px;
-  height:480px;
-  margin-left: 10%;
-  margin-right: 10%;
+
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 10%;
   
+}*/
+
+.carousel-inner > .item {
+  height: 600px;
 }
 
+
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*--- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}
+
+/*============= IMAGE SLIDER =============*/
+
+.carousel-item {
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 600px;
+}
+/*---Change Carousel Transition Speed --*/
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+  display: block;
+  transition: -webkit-transform 1.2s ease;
+  transition: transform 1.2s ease;
+  transition: transform 1.2s ease,-webkit-transform 1.2s ease;
+
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 
