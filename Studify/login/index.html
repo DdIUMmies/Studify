@@ -8,13 +8,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-        <link href="../stylelogin.css" rel="stylesheet">
+        <link href="stylelogin.css" rel="stylesheet">
         <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
     </head>
     <body class="text-center">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
             <div class="container-fluid">
-                <a class ="navbar-brand" href="../index.html"><img src="../img/logo_small.png" height="75" alt loading="lazy"></a>
+                <a class ="navbar-brand" href="index.html"><img src="img/logo_small.png" height="75" alt loading="lazy"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarReponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="collapseResponsive"></div>
             <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
             <li class="nav-item active ">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
                          aria-haspopup="true" aria-expanded="false">Appunti</a>
@@ -51,26 +51,25 @@
               <div class="card h-100">
                 <div class="card-body">
                   <p class="card-text">
-
-                        <form method="POST" action="login.php" class="form-signin" name="myForm">
+                    <form class="form-container">
+                        <form method="POST" action="log.php">
                             <h1> Accedi </h1>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email" required>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                            <br>
-                
-                            <div id="divRemember" class="checkbox mb-3">
-                                <input type="checkbox" name="remember"/>
-                                <label for="remember">Ricordami per la prossima volta!</label>
-                            </div>
-                            <button class="btn btn-lg btn-primary" name="loginButton"
-                                type="submit">Accedi</button>
+                            <input type="text" id="email" name="email" maxlength="50" placeholder="Email" required>
+                            <input type="password" id="password" name="password" placeholder="Password" required>
                             <br>
                             <br>
-            
+<<<<<<< HEAD
+                            <button class="btn btn-lg btn-primary" name="bottoneRegistrami" type="submit" style="width: auto;">Log In</button>
+=======
+                            <button class="btn btn-lg btn-primary" name="loginButton" type="submit">Log In</button>
+>>>>>>> 4bd63a6fc842cc2db6133491642dd3f3b2cdf2e6
+                            <br>
+                            <br>
+                        </form>
                     </form>
                     <li class="nav-item active">    
                         Non hai un account esistente? Allora
-                        <a class="btn btn-primary" href="../registrazione/index.html"> Registrati! </a>
+                        <a class="btn btn-primary" href="registrazione.html"> Registrati! </a>
                   </p>
                 </div>
               </div>

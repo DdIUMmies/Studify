@@ -30,6 +30,13 @@
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
+.carousel-inner{
+   height: 400px;
+}
+
+
+
+
 /*--- Fixed Background Image --*/
 figure {
   position: relative;
@@ -61,22 +68,53 @@ figure {
 }
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 1rem;
+    padding:1rem;
 }
 
-body{
+.jumbotron {
+  background-image: url('/Studify/img/mac.png');
+  background-size: cover;
+
+} 
+
+/*body{
   background-image: url('img/mac.png');
-}
 
+
+
+}*/
+
+.text-center {
+  text-align: center;
+}
+.images{
+  height: 400;
+}
 .card-text{
   position: relative;
   align-items:center;
 }
 
+
 .row {
   align-content: center;
   position: relative;
 }
+
+.card {
+  margin: 1 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 6px; /* Added */
+}
+.bmi {         /*my additional class name -for card*/
+  margin-left: 10%;      
+  margin-right: 10%;
+  margin-top: 5%;
+  width: auto;
+  margin-bottom: 10%;
+  
+}
+
 
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
