@@ -13,11 +13,18 @@
     </head>
     <body class="text-center">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
-            <div class="container-fluid">
-                <a class ="navbar-brand" href="../index.html"><img src="../img/logo_small.png" height="75" alt loading="lazy"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarReponsive">
-                <span class="navbar-toggler-icon"></span>
+            <nav class="navbar navbar-light bg-light">
+              <div class="container">
+                <a class="navbar-brand" href="index.html">
+                  <img
+                    src="../img/logo_small.png"
+                    height="50"
+                    alt=""
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </nav>
         
             </button>
         
@@ -25,6 +32,14 @@
             <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
             <li class="nav-item active ">
                 <a class="nav-link" href="../index.html">Home</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/Studify/profile.html" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false">Il mio account</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+                        <a class="dropdown-item" href="/Studify/profile.html">I tuoi appunti </a>
+                        <a class="dropdown-item" href="#">entra</a>
+                        <a class="dropdown-item" href="#">esci</a>
+                        <div class="dropdown-divider"></div>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
                          aria-haspopup="true" aria-expanded="false">Appunti</a>
@@ -34,8 +49,6 @@
                         <a class="dropdown-item" href="#">Economia</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Altre facoltà</a>
-                <li class="nav-item active ">
-                    <a class="nav-link " href="#">Supporto</a>
                 <li class="nav-item active ">
                     <a class="nav-link" href="#">FAQ</a>
                 <li class="nav-item active ">
@@ -63,10 +76,7 @@
                             <input type="email" class="form-control" name="inputEmail" placeholder="Email" required>
                             
                             <input type="password" class="form-control" name="inputPassword" placeholder="Password" required>
-                            <div id="divRemember" class="checkbox mb-3">
-                                <input type="checkbox" name="remember">
-                                <label for="remember">Ricordami per la prossima volta</label>
-                            </div>
+                            <br>
                             <button class="btn btn-lg btn-primary btn-block" name="registrationButton" type="submit" >Iscriviti</button>
             
                         </form>
