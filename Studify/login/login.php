@@ -29,7 +29,7 @@
                 }
                 else {
                     $nome=$line['nome'];
-                    echo "<a href=../Welcome.php?name=$nome> Premi qui </a> per iniziare a navigare!";
+                    echo "<a href= Welcome.php?name=$nome> Premi qui </a> per iniziare a navigare!";
                 }
             }
         }
