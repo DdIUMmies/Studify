@@ -9,6 +9,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script type="text/javascript" lang="javascript" src="script.js"></script>
 	<link href="style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
 </head>
@@ -72,25 +73,63 @@
 
 <div class="bmi">
 <div class="container">
-	<form>
 		<div class= "input-group">
-			<input type="text" class ="form-control" placeholder="Cerca Appunti, Lezioni e molto altro..."  name="search">
+			<input type="text" id="barraRicerca" class="form-control" onkeyup="ricerca()" placeholder="Cerca Appunti, Lezioni e molto altro...">
+			
 			<div class ="input-group-btn">
-				<button style="background-color:navy;"    class="btn btn-lg btn-primary" name="bottoneRegistrami" type="submit">Cerca</button>		
-
+				      
+				<button style="background-color:navy;"    class="btn btn-lg btn-primary" name="bottoneCerca" type="submit">Cerca</button>		
 
 			</div>
+			<br>
+			<div class="container" id="elencoRoba" >
+				<br>
+						<ul id="elenco" class="menu">
+							<li class="primo">
+								Tutte le facoltà
+								<ul class="sub-menu">
+									<a class="dropdown-item" href="informatica.html"> Informatica </a>
+									<a class="dropdown-item" href="economia.html"> Economia </a>
+									<a class="dropdown-item" href="psicologia.html"> Psicologia </a>
+									
+								</ul>
+							</li>
+							<li class="primo">
+									Informatica
+										<ul class="sub-menu">
+											<li class="dropdown-item" href="#">Appunti Informatica</li>
+
+											<li class="dropdown-item" href="#">Video Informatica</li>
+											<li class="dropdown-item" href="#">FAQ Informatica</li>
+										</ul>
+							</li>
+							<li class="primo">
+									Economia
+										<ul class="sub-menu" >
+											<li class="dropdown-item" href="#">Appunti Economia</li>
+											<li class="dropdown-item" href="#">Video Economia</li>
+											<li class="dropdown-item" href="#">FAQ Economia</li>
+										</ul>	
+							<li class="primo">
+									Psicologia
+										<ul class="sub-menu">
+											<li class="dropdown-item" href="#">Appunti Psicologia</li>
+											<li class="dropdown-item" href="#">Video Psicologia</li>
+											<li class="dropdown-item" href="#">FAQ Psicologia</li>
+										</ul>
+						</ul>
+					</div>
+			</div>
 		</div>
-	</form>
-</div>
+	</div>
 <br>
-<div class=" text-center">
+<!-- <div class=" text-center">
 <a class="btn btn-primary" style="background-color: navy;"  href="login/index.html">Documenti</a></li>
 
 <a class="btn btn-primary" style="background-color: navy;" href="login/index.html">Appunti</a></li>
 <a class="btn btn-primary" style="background-color: navy;" href="login/index.html">Lezioni</a></li>
 </div>
-
+-->
 
 
 
