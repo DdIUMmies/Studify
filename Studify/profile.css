@@ -30,64 +30,8 @@
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
-
 .carousel-inner{
-     height: 500px;
- }
-.carousel {
-
-  margin-left: 0%;
-  margin-right: 0%;
-  margin-bottom: 10%;
-  
-}*/
-
-.carousel-inner > .item {
-  height: 600px;
-}
-
-
-/*--- Extra Bootstrap Column Padding --*/
-[class*="col-"] {
-  padding: 1rem;
-}
-
-/*--- Bootstrap Mobile Gutter Fix --*/
-.row, .container-fluid {
-  margin-left: 0px!important;
-  margin-right: 0px!important;
-}
-
-/*============= IMAGE SLIDER =============*/
-
-.carousel-item {
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 600px;
-}
-/*---Change Carousel Transition Speed --*/
-.carousel-item-next, .carousel-item-prev, .carousel-item.active {
-  display: block;
-  transition: -webkit-transform 1.2s ease;
-  transition: transform 1.2s ease;
-  transition: transform 1.2s ease,-webkit-transform 1.2s ease;
-
-}
-
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+   height: 400px;
 }
 
 
@@ -109,7 +53,7 @@ figure {
   height: 100%;
 }
 #fixed {
- /* background-image: url('img/mac.png');*/
+  background-image: url('img/mac.png');
   position: fixed;
   display: block;
   top: 0;
@@ -127,9 +71,28 @@ figure {
     padding:1rem;
 }
 
+.jumbotron {
+  background-image: url('/Studify/img/mac.png');
+  background-size: cover;
+  margin-left: 150;
+  height: 20px;
+  
+
+} 
+
 /*body{
   background-image: url('img/mac.png');
+
+
+
 }*/
+
+.text-center {
+  text-align: center;
+}
+.images{
+  height: 100;
+}
 
 .card-text{
   position: relative;
@@ -143,11 +106,28 @@ figure {
 }
 
 .card {
-  margin: 1 auto; /* Added */
-  float: none; /* Added */
-  margin-bottom: 6px; /* Added */
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    image-resolution:inherit;
 }
 
+.bmi {         /*my additional class name -for card*/
+  margin-left: 10%;      
+  margin-right: 10%;
+  margin-top: 5%;
+  width: auto;
+  margin-bottom: 10%;
+  
+}
+.card-img-top{
+  height: 300px;
+}
+.img-fluid{
+  height: auto;
+  width: 300px;
+  align-items:center;
+}
 
 
 /*
@@ -166,6 +146,17 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
