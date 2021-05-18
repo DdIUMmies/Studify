@@ -77,45 +77,48 @@
       
    
 
-  <form class="was-validated">
+    <form method="POST" action="formappunti.php" >
     <div class="mb-3">
       <label for="validationTextarea">Inserisci un titolo</label>
-      <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Appunti Napoleone Bonaparte..." required></textarea>
+      <input type="text" name="inputName" placeholder="Nome" name="inputname" class="form-control"required>
       <div class="invalid-feedback">
         Titolo Richiesto
       </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group"> 
       <label for="validationTextarea">Seleziona la categoria</label>
-      <select class="custom-select" required>
+      <select class="custom-select" name ="inputgroup" type=" text" required>
         <option value="">Categoria Documento </option>
         <option value="1">Libro</option>
         <option value="2">Videolezione</option>
         <option value="3">Appunti</option>
       </select>
     </div>
-      <br>
+
       
     <div class="mb-3">
       <label for="validationTextarea">Descrizione</label>
-      <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+      <input type="text" name="inputdescript" class="form-control" size="500" maxlength="500"  placeholder="Aggiungi una descrizione 500 parole max" required ></input>
       <div class="invalid-feedback">
       Aggiungi una descrizione,documenti con una descrizione vengono visionati 7 volte di più.
       </div>
     </div>
+
     <label for="validationTextarea">Inserisci il file</label>
     <div class="custom-file">
-      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+      <input type="file" class="custom-file-input" name="file"  required>
       <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
       <div class="invalid-feedback">Example invalid custom file feedback</div>
     </div>
+
     <div class="custom-control custom-checkbox mb-3">
       <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
       <label class="custom-control-label" for="customControlValidation1">Accetta termini e condizioni </label>
       <div class="invalid-feedback"></div>
     </div>
-    <button class="btn btn-primary" type="submit">Inserisci il tuo Documento</button>
+    <button class="btn btn-primary" type="submit" name="submit">Inserisci il tuo Documento</button>
+
   </form>
 </div>
 </div>
