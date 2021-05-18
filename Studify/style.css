@@ -121,13 +121,16 @@ figure {
 }
 .menu li:hover .sub-menu {
   visibility: visible;
+  cursor: pointer;
+  color: white;
 }
 
 .menu li{
   display: block;
   float: left;
   text-align: center;
-  border-right: 1px solid;
+  border-right: 5px solid;
+  color: white;
 }
 
 .primo {
