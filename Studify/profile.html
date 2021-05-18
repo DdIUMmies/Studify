@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/797356307c.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
   </head>
   <body>
 
@@ -203,7 +205,6 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <div class="container-fluid">
                 <img class="card-img-top" src="/Studify/img/basididati.jpg"  alt="Basi di Dati ">
               
                 <div class="card-body">
@@ -217,7 +218,7 @@
                     </div>
                     <small class="text-muted">ora</small>
                   </div>
-                </div>
+               
               </div>
             </div>
             </div>
@@ -227,7 +228,6 @@
                 <div class="card-body">
                   <h5>Agile Process</h5>
                   <p class="card-text">Appunti di ingegneria del software "Agile Process".</p>
-               
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                      
@@ -251,9 +251,12 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      <div class="container">
-                        <i onclick="Toggle()" id="btn" class="far fa-heart"></i>
-                      </div>
+                    </div>
+                    <div class="container">
+                      <i id="btn" class="far fa fa-heart"></i>
+                    </div>
+                     
+                      
                     </div>
                     <small class="text-muted">9 mins</small>
                   </div>
@@ -261,109 +264,23 @@
               </div>
             </div>
 
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      <button class="btn btn-outline-primary"><i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      <button class="btn btn-outline-primary"><i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      <button class="btn btn-outline-primary"><i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      <button class="btn btn-outline-primary"><i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      <button class="btn btn-outline-primary"><i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      <button class="btn btn-outline-primary"><i class="fa fa-heart" aria-hidden="true"></i>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+      
+            
+              
 
+                 
+                    
+                     
+                     
+                    
+                  
+ 
+            
     </main>
 
+    
 
   
     <!---                                   Footer                                     -->
@@ -485,21 +402,17 @@
 
 
 <script>
-  function myFunction(x) {
-    x.classList.toggle("fa-thumbs-down");
-    x.classList.toggle("fa-thumbs-up");
-  }
-  var btn= document.getElementById("btn");
-  function Toggle(){
-    if(btn.classList.contains("far")){
-      btn.classList.remove("far");
-      btn.classList.add("fas");
-    }else {
-        btn.classList.remove("fas");
-      btn.classList.add("far");
-
-      }
-  }
+ $(document).ready(function(){
+  $("#heart").click(function(){
+    if($("#heart").hasClass("liked")){
+      $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
+      $("#heart").removeClass("liked");
+    }else{
+      $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
+      $("#heart").addClass("liked");
+    }
+  });
+});
 </script>
 
 

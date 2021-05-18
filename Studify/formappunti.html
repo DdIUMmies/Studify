@@ -1,0 +1,231 @@
+<!DOCTYPE html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Studify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="formappunti.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/797356307c.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  </head>
+
+
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="img/logo_small.png"
+              height="50"
+              alt=""
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </nav>
+  
+      <div class="collapse navbar-collapse" id="collapseResponsive"></div>
+      <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
+          <li class="nav-item active ">
+              <a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Appunti</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+                  <a class="dropdown-item" href="#">Informatica</a>
+                  <a class="dropdown-item" href="#">Psicologia</a>
+                  <a class="dropdown-item" href="#">Economia</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Altre facoltà</a>
+          <li class="nav-item active ">
+              <a class="nav-link" href="FAQ.html">FAQ</a></li>
+          <li class="nav-item active ">
+              <a class="nav-link" href="#">Lavora con noi</a></li>
+          <li class="nav-item active">
+              <a class="nav-link" href="registrazione.html" > Registrati </a></li>
+          <li class="nav-item active">
+              <a class="btn btn-primary" style="background-color: navy;" href="logIn.html">Accedi</a></li>
+          
+      </ul>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+<div class="container-fluid" style="margin: left 100px; margin-right: 100px">
+  <div class="jumbotron">
+    <br>
+    <div class=" text-center">
+    <h3> Carica i tuoi documenti!  &#8205; </h3>
+  </div>
+
+    </br>
+    
+      
+   
+
+  <form class="was-validated">
+    <div class="mb-3">
+      <label for="validationTextarea">Inserisci un titolo</label>
+      <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Appunti Napoleone Bonaparte..." required></textarea>
+      <div class="invalid-feedback">
+        Titolo Richiesto
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="validationTextarea">Seleziona la categoria</label>
+      <select class="custom-select" required>
+        <option value="">Categoria Documento </option>
+        <option value="1">Libro</option>
+        <option value="2">Videolezione</option>
+        <option value="3">Appunti</option>
+      </select>
+    </div>
+      <br>
+      
+    <div class="mb-3">
+      <label for="validationTextarea">Descrizione</label>
+      <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+      <div class="invalid-feedback">
+      Aggiungi una descrizione,documenti con una descrizione vengono visionati 7 volte di più.
+      </div>
+    </div>
+    <label for="validationTextarea">Inserisci il file</label>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+      <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+      <div class="invalid-feedback">Example invalid custom file feedback</div>
+    </div>
+    <div class="custom-control custom-checkbox mb-3">
+      <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+      <label class="custom-control-label" for="customControlValidation1">Accetta termini e condizioni </label>
+      <div class="invalid-feedback"></div>
+    </div>
+    <button class="btn btn-primary" type="submit">Inserisci il tuo Documento</button>
+  </form>
+</div>
+</div>
+
+<br>
+  <br>
+  <br>
+  <br>
+  
+
+    <!---                                   Footer                                     -->
+    <footer class="bg-light text-center text-black" style="background-color: antiquewhite;">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      
+        <!-- Twitter -->
+        <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button" 
+          ><i class="fab fa-twitter"></i
+        ></a>
+      
+        <!-- Google -->
+        <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+      
+        <!-- Instagram -->
+        <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      
+        <!-- Linkedin -->
+        <a class="btn btn-outline-dark  btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      
+        <!-- Github -->
+        <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+        </section>
+        <!-- Section: Social media -->
+      
+        <!-- Section: Form -->
+        <section class="">
+        <form action=""> 
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+            <strong>Iscriviti alla newsletter!</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+      
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-dark mb-4">
+            <input type="email" id="form5Example2" class="form-control" />
+            <label class="form-label" for="form5Example2">Email </label>
+            </div>
+          </div>
+          <!--Grid column-->
+      
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-dark mb-4">
+            Iscriviti
+            </button>
+          </div>
+          <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+        </section>
+        <!-- Section: Form -->
+      
+        <!-- Section: Text -->
+        <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+        </section>
+        <!-- Section: Text -->
+      
+        <!-- Section: Links -->
+        
+      
+          <!--Grid column-->
+      
+          
+      
+      <!-- Copyright -->
+      <div class="text-center p-3" >
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">Studify.it</a>
+      </div>
+      <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    
+
+</head>

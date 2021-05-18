@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 
@@ -71,21 +72,14 @@ figure {
     padding:1rem;
 }
 
-.jumbotron {
-  background-image: url('/Studify/img/mac.png');
-  background-size: cover;
- 
-  
-
-} 
 
 
-/*body{
+body{
   background-image: url('img/mac.png');
 
 
 
-}*/
+}
 
 .text-center {
   text-align: center;
@@ -129,33 +123,13 @@ figure {
   align-items:center;
 }
 
-.container{
-  box-shadow: 0 2px 8px rgba(0,0,0,.1);
-  background-color: #fafafa;
-
-}
-
-.container i{
-  font-size:5rem;
-  transition: .4s;
-}
-.container :hover i{
-  color: #f50057;
-}
 
 
 
 
 
-@keyframes heart {
-  0%{
-    transform: rotate(0deg) scale(1.7);
-  }
-  100%{
-    transform: rotate(0deg) scale(1);
-  }
 
-}
+
 
 
 
