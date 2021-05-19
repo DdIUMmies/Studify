@@ -126,7 +126,7 @@ figure {
 }
 
 .menu li{
-  display: block;
+  display: none;
   float: left;
   text-align: center;
   border-right: 5px solid;

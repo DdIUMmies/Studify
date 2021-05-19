@@ -49,7 +49,7 @@
             <li class="nav-item active ">
                 <a class="nav-link" href="#">Lavora con noi</a></li>
             <li class="nav-item active">
-                <a class="nav-link" href="registrazione.html" > Registrati </a></li>
+                <a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
             <li class="nav-item active">
                 <a class="btn btn-primary" style="background-color: navy;" href="logIn.html">Accedi</a></li>
             
@@ -60,7 +60,12 @@
     <div class="jumbotron " style="background-image: url(/Studify/img/sfondo.png);">
     
       <div class="text-center">
-          <h2>Buongiorno Alessandro &#128104;&#8205;&#127891; </h2></div>
+          <h2>Buongiorno 
+            <?php
+            $nome=$_GET['name'];
+            echo "$nome";
+            ?> 
+            &#128104;&#8205;&#127891; </h2></div>
       </div>
 
     </div>
@@ -80,7 +85,12 @@
                     <div class="d-flex flex-column align-items-center text-center">
                       <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                       <div class="mt-3">
-                        <h4>Alessandro Di Patria</h4>
+                        <h4>
+                          <?php
+                            $nome=$_GET['name'];
+                            echo "$nome";
+                          ?> 
+                        </h4>
                         <p class="text-secondary mb-1">Studente Informatica presso "La Sapienza"</p>
                         <p class="text-muted font-size-sm">Italy Rome</p>
                         <button class="btn btn-outline-primary"><i class="fa fa-star" aria-hidden="true"></i></button>
@@ -119,7 +129,11 @@
                         <h6 class="mb-0">Full Name</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        Alessandro Di Patria
+                        <?php
+                          $nome=$_GET['name'];
+                          $cognome=$_GET['surname'];
+                          echo "$cognome, $nome";
+                        ?> 
                       </div>
                     </div>
                     <hr>
@@ -143,10 +157,15 @@
                     <hr>
                     <div class="row">
                       <div class="col-sm-3">
-                        <h6 class="mb-0">Email</h6>
+                        <h6 class="mb-0">
+                          Indirizzo email
+                        </h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        dipatria.business@gmail.com
+                        <?php
+                            $email=$_GET['emailadd'];
+                            echo "$email";
+                        ?> 
                       </div>
                     
                     </div>

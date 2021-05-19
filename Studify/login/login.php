@@ -29,7 +29,9 @@
                 }
                 else {
                     $nome=$line['nome'];
-                    echo "<a href= Welcome.php?name=$nome> Premi qui </a> per iniziare a navigare!";
+                    $cognome=$line['cognome'];
+                    $email=$line['email'];
+                    echo "<a href= ../profile.php?name=$nome&surname=$cognome&emailadd=$email> Premi qui </a> per iniziare a navigare!";
                 }
             }
         }

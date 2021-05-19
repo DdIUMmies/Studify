@@ -14,7 +14,7 @@ function ricerca() {
         x = lista.getElementsByTagName("li")[i];
         testo = x.textContent || x.innerText;
         if (testo.toUpperCase().indexOf(filtro) > -1) {
-          voci[i].style.display = "";
+          voci[i].style.display = "block";
         } else {
           voci[i].style.display = "none";
         }
