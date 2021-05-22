@@ -15,20 +15,26 @@
                 $q1 = "select * from utenti where email=$1";
                 $result = pg_query_params($dbconn, $q1, array($email));
                 if ($line=pg_fetch_array($result, null, PGSQL_ASSOC)) {
-                    echo "<h1> Esiste già un account registrato con questa mail! </h1>
-                        <a href=../login/index.html> Clicca qui per accedere! </a>"; 
+                    echo("<script LANGUAGE='JavaScript'>
+                        window.alert('Esiste già un account registrato con questa email! Premi OK per essere reindirizzato alla pagina di Log In!');
+                        window.location.href='../login/index.html';
+                        </script>");
                 }
                 else {
                     $nome=$_POST['inputName'];
                     $cognome=$_POST['inputSurname'];
                     $password=md5($_POST['inputPassword']);
                     $username=$_POST['inputUsername'];
-                    $q2="insert into utenti values ($1,$2,$3,$4,$5)";
-                    $data=pg_query_params($dbconn, $q2, array($email,$nome,$cognome,$password,$username));
+                    $universita=$_POST['inputUni'];
+                    $corso=$_POST['inputCorso'];
+                    $q2="insert into utenti values ($1,$2,$3,$4,$5,$6,$7)";
+                    $data=pg_query_params($dbconn, $q2, array($email,$nome,$cognome,$password,$username,$universita,$corso));
 
                     if ($data) {
-                        echo "<h1>Registrazione completata.</h1>";
-                        echo "<a href=../index.html Premi qui </a> per ritornare alla home!.";
+                        echo("<script LANGUAGE='JavaScript'>
+                        window.alert('Registrazione completata. Benvenenuto in Studify! Premi OK per essere reindirizzato alla pagina di Log In!');
+                        window.location.href='../login/index.html';
+                        </script>");
                     }
 
                 }

@@ -33,7 +33,10 @@
                     $cognome=$line['cognome'];
                     $email=$line['email'];
                     $username=$line['username'];
-                    echo "<a href= ../profile.php?name=$nome&surname=$cognome&emailadd=$email> Premi qui </a> per iniziare a navigare!";
+                    $universita=$line['universita'];
+                    $corso=$line['corso'];
+                    header("Location: ../profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita");
+                
                 }
             }
         }
