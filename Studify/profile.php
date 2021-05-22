@@ -19,44 +19,54 @@
   </head>
   <body>
 
+    <!---nav bar --->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
-        <nav class="navbar navbar-light bg-light">
-          <div class="container">
-            <a class="navbar-brand" href="index.html">
-              <img
-                src="img/logo_small.png"
-                height="50"
-                alt=""
-                loading="lazy"
-              />
-            </a>
-          </div>
-        </nav>
-    
-        <div class="collapse navbar-collapse" id="collapseResponsive"></div>
-        <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
-            <li class="nav-item active ">
-                <a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">Appunti</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-                    <a class="dropdown-item" href="#">Informatica</a>
-                    <a class="dropdown-item" href="#">Psicologia</a>
-                    <a class="dropdown-item" href="#">Economia</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Altre facoltà</a>
-            <li class="nav-item active ">
-                <a class="nav-link" href="FAQ.html">FAQ</a></li>
-            <li class="nav-item active ">
-                <a class="nav-link" href="#">Lavora con noi</a></li>
-            <li class="nav-item active">
-                <a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
-            <li class="nav-item active">
-                <a class="btn btn-primary" style="background-color: navy;" href="logIn.html">Accedi</a></li>
-            
-        </ul>
-    </nav>
+      <nav class="navbar navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="img/logo_small.png"
+              height="50"
+              alt=""
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </nav>
+  
+      <div class="collapse navbar-collapse" id="collapseResponsive"></div>
+      <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
+          <li class="nav-item active ">
+              <a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Appunti</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+                  <a class="dropdown-item" href="#">Informatica</a>
+                  <a class="dropdown-item" href="#">Psicologia</a>
+                  <a class="dropdown-item" href="#">Economia</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Altre facoltà</a>
+          <li class="nav-item active ">
+              <a class="nav-link" href="FAQ.html">FAQ</a></li>
+          <li class="nav-item active ">
+              <a class="nav-link" href="#">Lavora con noi</a></li>
+          <li class="nav-item active">
+              <a class="nav-link" href="registrazione.html" > <?php
+            $nome=$_GET['name'];
+            echo "$nome";
+            ?>  </a></li>
+          <li class="nav-item active">
+              <a class="btn btn-primary" style="background-color: navy;" href="logIn.html">Esci</a></li>
+          
+      </ul>
+  </nav>
+
+
+
+
+
+
     <br>
     <div class="container">
     <div class="jumbotron " style="background-image: url(/Studify/img/sfondo.png);">
@@ -282,17 +292,24 @@
                 </div>
               </div>
             </div>
+        </div>
+        <div class="container">
+        
+   
+        <a class="btn btn-light btn-block"  style="border-color:lightblue;" href="/Studify/formappunti.html" role="button">Carica Documento</a>
 
+        <br>
+        </div>
         </div>
       </div>
       
             
               
-
+      
                  
                     
                      
-                     
+        <br>
                     
                   
  
