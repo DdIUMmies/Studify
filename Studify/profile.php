@@ -19,6 +19,9 @@
   </head>
   <body>
 
+ 
+
+
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
         <nav class="navbar navbar-light bg-light">
           <div class="container">
@@ -36,7 +39,7 @@
         <div class="collapse navbar-collapse" id="collapseResponsive"></div>
         <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
             <li class="nav-item active ">
-                <a class="nav-link" href="#">Home</a></li>
+                <a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
                      aria-haspopup="true" aria-expanded="false">Appunti</a>
@@ -53,7 +56,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
             <li class="nav-item active">
-                <a class="btn btn-primary" style="background-color: navy;" href="logIn.html">Accedi</a></li>
+                <a class="btn btn-primary" style="background-color: navy;" href="login/index.html">Accedi</a></li>
             
         </ul>
     </nav>

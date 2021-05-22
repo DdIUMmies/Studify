@@ -7,6 +7,7 @@
             user=postgres password=password")
             or die('Impossibile connettersi: '.pg_last_error());
         
+
         if (!(isset($_POST['loginButton']))) {
             header("Location: ../index.html");
         }
@@ -31,6 +32,7 @@
                     $nome=$line['nome'];
                     $cognome=$line['cognome'];
                     $email=$line['email'];
+                    $username=$line['username'];
                     echo "<a href= ../profile.php?name=$nome&surname=$cognome&emailadd=$email> Premi qui </a> per iniziare a navigare!";
                 }
             }
