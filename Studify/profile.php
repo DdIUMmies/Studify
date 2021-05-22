@@ -52,20 +52,15 @@
           <li class="nav-item active ">
               <a class="nav-link" href="#">Lavora con noi</a></li>
           <li class="nav-item active">
-              <a class="nav-link" href="registrazione.html" > <?php
+              <a class="nav-link" href="registrazione/index.html" > <?php
             $nome=$_GET['name'];
             echo "$nome";
             ?>  </a></li>
           <li class="nav-item active">
-              <a class="btn btn-primary" style="background-color: navy;" href="logIn.html">Esci</a></li>
+              <a class="btn btn-primary" style="background-color: navy;" href="login/index.html">Esci</a></li>
           
       </ul>
   </nav>
-
-
-
-
-
 
     <br>
     <div class="container">
