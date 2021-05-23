@@ -1,12 +1,9 @@
 <?php 
     $dbconn= pg_connect("host=localhost port=5432
     dbname=Appunti_Studify
-    user=admin password=1846839")
+    user=postgres password=1846839")
     or die('Impossibile connettersi: '.pg_last_error());
-    echo "Connessione riuscita.";
-
-    // cartella in cui far l'upload
-    $cartella_upload = "Downloads/";
+    
 
     // array contenente i tipi di file per cui è possibile fare l'upload
     $tipi_consentiti = array("pdf","mkv","mp4");
@@ -15,54 +12,50 @@
     $max_byte = 409600000;
 
     // verifico se il form è stato inviato  
-    if(isset($_POST['up']) and isset($_FILES["upload"]))  
+    if(isset($_POST['submit']) and isset($_FILES["userfile"]))  
     {  
         // verifichiamo che l'utente abbia selezionato un file  
-        if(trim($_FILES["upload"]["name"]) == '')  
+        if(trim($_FILES["userfile"]["name"]) == '')  
         {  
             echo 'Non hai selezionato nessun file!';  
         }  
 
         // verifichiamo che il file è stato caricato  
-        else if(!is_uploaded_file($_FILES["upload"]["tmp_name"]) or $_FILES["upload"]["error"]>0)  
+        else if(!is_uploaded_file($_FILES["userfile"]["tmp_name"]) or $_FILES["userfile"]["error"]>0)  
         {  
             echo 'Si sono verificati problemi nella procedura di upload!';  
         }  
 
         // verifichiamo che il tipo è fra quelli consentiti  
-        else if(!in_array(strtolower(end(explode('.', $_FILES["upload"]["name"]))),$tipi_consentiti))  
+        else if(!in_array(strtolower(end(explode('.', $_FILES["userfile"]["name"]))),$tipi_consentiti))  
         {  
-            echo 'Il file che si desidera caricare non è fra i tipi consentiti!';  
+            echo 'Il file che si desideri caricare non è fra i tipi consentiti!';  
         }  
 
         // verifichiamo che la dimensione del file non eccede quella massima  
-        else if($_FILES["upload"]["size"] > $max_byte)  
+        else if($_FILES["userfile"]["size"] > $max_byte)  
         {  
             echo 'Il file che si desidera caricare eccede la dimensione massima!';  
         }  
-        
-        // verifichiamo che la cartella di destinazione settata esista  
-        else if(!is_dir($cartella_upload))  
-        {  
-            echo 'La cartella in cui si desidera salvare il file non esiste!';  
-        }  
-        
-        // verifichiamo che la cartella di destinazione abbia i permessi di scrittura  
-        else if(!is_writable($cartella_upload))  
-        {  
-            echo "La cartella in cui fare l'upload non ha i permessi!";  
-        }  
 
-        // verifichiamo il successo della procedura di upload nella cartella settata  
-        else if(!move_uploaded_file($_FILES["upload"]["tmp_name"], $cartella_upload.$_FILES["upload"]["name"]))  
-        {  
-            echo 'Ops qualcosa è andato storto nella procedura di upload!';  
-        }  
+        else
+        {
+          echo "Il form è stato inviato con successo!";
+        }
+    }
+    
+    $titolo=$_POST['nome_documento'];
+    $categoria=$_POST['categoria'];
+    $codice_corso_laurea=$_POST['codice_corso_laurea'];
+    $materia=$_POST['materia'];
+    $descrizione=$_POST['descrizione_documento'];
+    $file=$_FILES['userfile'];
 
-        // altrimenti significa che è andato tutto ok  
-        else  
-        {  
-            echo 'Upload eseguito correttamente!';  
-        }  
-    }  
+    $insert_into_db = pg_query($dbconn,"INSERT INTO appunti (materia, nome_documento, documento, descrizione, categoria, codice_corso_laurea)
+                            VALUES ('$materia','$titolo','$file','$descrizione','$categoria','$codice_corso_laurea')");
+    if($insert_into_db){
+        echo("<br>Il documento è stato caricato correttamente");
+    } else{
+        echo("<br>Caricamento non eseguito");
+    }
 ?>
