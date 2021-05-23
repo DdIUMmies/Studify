@@ -53,8 +53,8 @@
               <a class="nav-link" href="#">Lavora con noi</a></li>
           <li class="nav-item active">
               <a class="nav-link" href="registrazione/index.html" > <?php
-            $nome=$_GET['name'];
-            echo "$nome";
+            $username=$_GET['user'];
+            echo "$username";
             ?>  </a></li>
           <li class="nav-item active">
               <a class="btn btn-primary" style="background-color: navy;" href="login/index.html">Esci</a></li>
@@ -69,8 +69,8 @@
       <div class="text-center">
           <h2>Buongiorno 
             <?php
-            $nome=$_GET['name'];
-            echo "$nome";
+            $username=$_GET['user'];
+            echo "$username";
             ?> 
             &#128104;&#8205;&#127891; </h2></div>
       </div>
@@ -94,12 +94,18 @@
                       <div class="mt-3">
                         <h4>
                           <?php
-                            $nome=$_GET['name'];
-                            echo "$nome";
+                            $username=$_GET['user'];
+                            echo "$username";
                           ?> 
                         </h4>
-                        <p class="text-secondary mb-1">Studente Informatica presso "La Sapienza"</p>
-                        <p class="text-muted font-size-sm">Italy Rome</p>
+                        <p class="text-secondary mb-1">Studente di <?php
+                            $corso=$_GET['cor'];
+                            echo "$corso";
+                          ?> presso <?php
+                          $universita=$_GET['uni'];
+                          echo "$universita";
+                        ?> </p>
+                        
                         <button class="btn btn-outline-primary"><i class="fa fa-star" aria-hidden="true"></i></button>
                         <div class="btn btn-outline-primary">Message</button>
                       </div>
@@ -149,7 +155,10 @@
                         <h6 class="mb-0">Università</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        Universita degli studi "La Sapienza Roma"
+                        <?php
+                          $universita=$_GET['uni'];
+                          echo "$universita";
+                        ?> 
                       </div>
                     </div>
                     <hr>
@@ -158,7 +167,10 @@
                         <h6 class="mb-0">Corso Di Studi</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                       Informatica L-31
+                        <?php
+                          $corso=$_GET['cor'];
+                          echo "$corso";
+                        ?> 
                       </div>
                     </div>
                     <hr>
@@ -177,24 +189,6 @@
                     
                     </div>
                     <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Mobile</h6>
-                      </div>
-                      <div class="col-sm-9 text-secondary">
-                        3462434456
-                      </div>
-                    </div>
-                    
-                    <hr>
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h6 class="mb-0">Address</h6>
-                      </div>
-                      <div class="col-sm-9 text-secondary">
-                       via mameli 90 Roma 
-                      </div>
-                    </div>
                     
                   </div>
                 </div>
