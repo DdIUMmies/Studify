@@ -80,7 +80,7 @@
   <form method="POST" action="formappunti.php" enctype="multipart/form-data">
     <div class="mb-3">
       <label for="validationTextarea">Inserisci un titolo</label>
-      <input type="text" name="inputName" placeholder="Nome" name="inputname" class="form-control"required>
+      <input type="text" name="nome_documento" placeholder="Nome" class="form-control"required>
       <div class="invalid-feedback">
         Titolo Richiesto
       </div>
@@ -88,7 +88,7 @@
 
     <div class="form-group"> 
       <label for="validationTextarea">Seleziona la categoria</label>
-      <select class="custom-select" name ="inputgroup" type=" text" required>
+      <select class="custom-select" name ="categoria" type=" text" required>
         <option value="">Categoria Documento </option>
         <option value="1">Libro</option>
         <option value="2">Videolezione</option>
@@ -98,7 +98,7 @@
 
     <div class="form-group"> 
       <label for="validationTextarea">Codice Corso di Caurea</label>
-      <select class="custom-select" name ="inputgroup" type=" text" required>
+      <select class="custom-select" name ="codice_corso_laurea" type=" text" required>
         <option value=""> Codice Corso di Laurea </option>
         <option value="1"> SNT/01 Classe delle lauree in professioni sanitarie infermieristiche e professione sanitaria ostetrica          
         </option>
@@ -419,7 +419,7 @@
 
     <div class="mb-3">
       <label for="validationTextarea">Materia</label>
-      <input type="text" name="inputdescript" class="form-control" size="500" maxlength="500"  placeholder="Aggiungi una materia 500 parole max" required ></input>
+      <input type="text" name="materia" class="form-control" size="500" maxlength="500"  placeholder="Aggiungi una materia 500 parole max" required ></input>
       <div class="invalid-feedback">
       Aggiungi la materia, documenti con una materia vengono visionati 7 volte di più.
       </div>
@@ -427,25 +427,21 @@
       
     <div class="mb-3">
       <label for="validationTextarea">Descrizione</label>
-      <input type="text" name="inputdescript" class="form-control" size="500" maxlength="500"  placeholder="Aggiungi una descrizione 500 parole max" required ></input>
+      <input type="text" name="descrizione_documento" class="form-control" size="500" maxlength="500"  placeholder="Aggiungi una descrizione 500 parole max" required ></input>
       <div class="invalid-feedback">
       Aggiungi una descrizione,documenti con una descrizione vengono visionati 7 volte di più.
       </div>
     </div>
 
-    <label for="validationTextarea">Inserisci il file</label>
-    <div class="custom-file">
-      <input type="file" class="custom-file-input" name="up"  required>
-      <label class="custom-file-label" for="validatedCustomFile">Scegli il file...</label>
-      <div class="invalid-feedback"> Il file inserito non è valido</div>
-    </div>
-
     <div class="custom-control custom-checkbox mb-3">
-      <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+      <input type="checkbox" name="term_e_cond" class="custom-control-input" id="customControlValidation1" required>
       <label class="custom-control-label" for="customControlValidation1">Accetta termini e condizioni </label>
       <div class="invalid-feedback"></div>
     </div>
-    <button class="btn btn-primary" type="submit" name="submit" value="Carica file">Carica file</button>
+
+    <input type="file" name="userfile">
+
+    <input type="submit" name="submit" value="Carica file">
 
   </form>
 </div>
