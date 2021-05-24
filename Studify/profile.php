@@ -1,5 +1,11 @@
+<?php
+  session_start();
 
-<!DOCTYPE html >
+  if(isset($_SESSION['id'])) {
+    echo "Ciaooo ".$_SESSION['id']."<br>";
+    ?>
+    <form action="logout.php" method="post"><input type="submit" value="Logout" /></form>
+    <!DOCTYPE html >
 <head>
   <head>
     <meta charset="utf-8">
@@ -57,8 +63,7 @@
             echo "$username";
             ?>  </a></li>
           <li class="nav-item active">
-              <a class="btn btn-primary" style="background-color: navy;" href="login/index.html">Esci</a></li>
-          
+              <form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
       </ul>
   </nav>
 
@@ -439,5 +444,17 @@
   });
 });
 </script>
+
+    <?php
+
+} else {
+    echo "Non hai accesso";
+    ?>
+    <form action="login/index.php" method="post">
+    <input type="submit" value="Login"/>
+    </form>
+    <?php
+}
+?>
 
 

@@ -1,7 +1,15 @@
+<?php
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD']=="POST") {
+            $_SESSION['id'] = "Maxi";
+    }
+?>
 <html>
     <head></head>
     <body>
     <?php
+
         $dbconn= pg_connect("host=localhost port=5432
             dbname=StudifyDB
             user=postgres password=password")
@@ -9,7 +17,7 @@
         
 
         if (!(isset($_POST['loginButton']))) {
-            header("Location: ../index.html");
+            header("Location: ../index.php");
         }
         else {
             $email = $_POST['inputEmail'];
