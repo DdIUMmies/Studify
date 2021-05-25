@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
             <nav class="navbar navbar-light bg-light">
               <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                   <img
                     src="../img/logo_small.png"
                     height="50"
@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse" id="collapseResponsive"></div>
             <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
             <li class="nav-item active ">
-                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="../index.php">Home</a>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="../profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
                          aria-haspopup="true" aria-expanded="false">Il mio account</a>
