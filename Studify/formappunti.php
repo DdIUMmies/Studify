@@ -1,7 +1,61 @@
-<?php
-if (isset ($_POST["submit"])){
-    $file = $_FILES["file"];
-    print_r($file);
-    $fileName = $_FILES["file"]["name"];
+<?php 
+    $dbconn= pg_connect("host=localhost port=5432
+    dbname=Appunti_Studify
+    user=postgres password=1846839")
+    or die('Impossibile connettersi: '.pg_last_error());
+    
 
-}
+    // array contenente i tipi di file per cui è possibile fare l'upload
+    $tipi_consentiti = array("pdf","mkv","mp4");
+
+    // dimesione massima del file (circa 400MB)
+    $max_byte = 409600000;
+
+    // verifico se il form è stato inviato  
+    if(isset($_POST['submit']) and isset($_FILES["userfile"]))  
+    {  
+        // verifichiamo che l'utente abbia selezionato un file  
+        if(trim($_FILES["userfile"]["name"]) == '')  
+        {  
+            echo 'Non hai selezionato nessun file!';  
+        }  
+
+        // verifichiamo che il file è stato caricato  
+        else if(!is_uploaded_file($_FILES["userfile"]["tmp_name"]) or $_FILES["userfile"]["error"]>0)  
+        {  
+            echo 'Si sono verificati problemi nella procedura di upload!';  
+        }  
+
+        // verifichiamo che il tipo è fra quelli consentiti  
+        else if(!in_array(strtolower(end(explode('.', $_FILES["userfile"]["name"]))),$tipi_consentiti))  
+        {  
+            echo 'Il file che si desideri caricare non è fra i tipi consentiti!';  
+        }  
+
+        // verifichiamo che la dimensione del file non eccede quella massima  
+        else if($_FILES["userfile"]["size"] > $max_byte)  
+        {  
+            echo 'Il file che si desidera caricare eccede la dimensione massima!';  
+        }  
+
+        else
+        {
+          echo "Il form è stato inviato con successo!";
+        }
+    }
+    
+    $titolo=$_POST['nome_documento'];
+    $categoria=$_POST['categoria'];
+    $codice_corso_laurea=$_POST['codice_corso_laurea'];
+    $materia=$_POST['materia'];
+    $descrizione=$_POST['descrizione_documento'];
+    $file=$_FILES['userfile'];
+
+    $insert_into_db = pg_query($dbconn,"INSERT INTO appunti (materia, nome_documento, documento, descrizione, categoria, codice_corso_laurea)
+                            VALUES ('$materia','$titolo','$file','$descrizione','$categoria','$codice_corso_laurea')");
+    if($insert_into_db){
+        echo("<br>Il documento è stato caricato correttamente");
+    } else{
+        echo("<br>Caricamento non eseguito");
+    }
+?>

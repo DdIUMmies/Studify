@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -75,7 +79,7 @@
                                 <input type="checkbox" name="remember">
                                 <label for="remember">Ricordami per la prossima volta</label>
                             </div>
-                            <button class="btn btn-lg btn-primary" name="loginButton" type="submit" style="width: auto;">Accedi</button>
+                            <input class="btn btn-lg btn-primary" name="loginButton" type="submit" style="width: auto;" value="Accedi"></input>
 
                         
                     </form>

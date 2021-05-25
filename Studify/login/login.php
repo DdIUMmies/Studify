@@ -1,7 +1,15 @@
+<?php
+    session_start();
+
+    if ($_SERVER['REQUEST_METHOD']=="POST") {
+            $_SESSION['id'] = "Maxi";
+    }
+?>
 <html>
     <head></head>
     <body>
     <?php
+
         $dbconn= pg_connect("host=localhost port=5432
             dbname=StudifyDB
             user=postgres password=password")
@@ -9,7 +17,7 @@
         
 
         if (!(isset($_POST['loginButton']))) {
-            header("Location: ../index.html");
+            header("Location: ../index.php");
         }
         else {
             $email = $_POST['inputEmail'];
@@ -33,7 +41,10 @@
                     $cognome=$line['cognome'];
                     $email=$line['email'];
                     $username=$line['username'];
-                    echo "<a href= ../profile.php?name=$nome&surname=$cognome&emailadd=$email> Premi qui </a> per iniziare a navigare!";
+                    $universita=$line['universita'];
+                    $corso=$line['corso'];
+                    header("Location: ../profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita");
+                
                 }
             }
         }

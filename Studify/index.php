@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,11 +50,23 @@
 			<a class="nav-link" href="FAQ.html">FAQ</a></li>
 		<li class="nav-item active ">
 			<a class="nav-link" href="#">Lavora con noi</a></li>
-		<li class="nav-item active">
-			<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
-		<li class="nav-item active">
-			<a class="btn btn-primary" style="background-color: navy;" href="login/index.html">Accedi</a></li>
-		
+			<?php
+				if(isset($_SESSION['id'])) {
+					?>
+					<li class="nav-item active">
+					<a class="nav-link" href="profile.php"> Account </a>
+					<li class="nav-item active">
+              			<form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
+				<?php
+				}
+				else {
+					?>
+					<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
+					<li class="nav-item active">
+					<a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
+					<?php
+				}
+				?>	
 	</ul>
 </nav>
 

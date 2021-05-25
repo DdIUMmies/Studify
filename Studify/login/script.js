@@ -5,6 +5,11 @@ function validaForm() {
     else {
         window.alert("Non sarai ricordato per la prossima volta.");
     }
+    window.alert("Benvenuto in Studify! Stai per essere reindirizzato al tuo profilo. Buona permanenza :)")
+}
+
+function accountReg() {
+  window.alert("Esiste già un account registrato con questa email! Clicca qui per accedere!");
 }
 
 function ricerca() {
