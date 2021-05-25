@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Studifyt</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="stylelogin.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <script type="text/javascript" lang="javascript" src="script.js"></script>
+</head>
+<body class="text-center">
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
+        <nav class="navbar navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="img/logo_small.png"
+                height="50"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </nav>
+    
+        </button>
+    
+        <div class="collapse navbar-collapse" id="collapseResponsive"></div>
+        <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
+        <li class="nav-item active ">
+            <a class="nav-link" href="index.php">Home</a>
+            <li class="nav-item active ">
+                <a class="nav-link" href="#">FAQ</a>
+            <li class="nav-item active ">
+                <a class="nav-link" href="#">Lavora con noi</a>
+            </ul>
+    
+    
+        </div>
+    </nav>
+    <br>
+    <div class="row">
+        <div class="col-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <p class="card-text">
+                    <form method="POST" action="login/login.php" class="form-signin" name="myForm" onsubmit="return validaForm()">
+                        <h1> Attenzione!</h1>
+                        <h5>Non hai i permessi necessari per visualizzare questa pagina. Effettua subito l'accesso!</h5>
+                        <input type="email" name="inputEmail" placeholder="Email" class="form-control" required>
+                        <input type="password" name="inputPassword" placeholder="Password" class="form-control" required>
+                        
+                        <div id="divRemember" class="checkbox mb-3">
+                            <input type="checkbox" name="remember">
+                            <label for="remember">Ricordami per la prossima volta</label>
+                        </div>
+                        <input class="btn btn-lg btn-primary" name="loginButton" type="submit" style="width: auto;" value="Accedi"></input>
+
+                    
+                </form>
+                <br>
+                <br>
+                <li class="nav-item active">    
+                    Non hai un account esistente? Allora
+                    <a class="btn btn-primary" href="../registrazione/index.html"> Registrati! </a>
+              </p>
+            </div>
+          </div>
+        </div>
+</body>
+</html>

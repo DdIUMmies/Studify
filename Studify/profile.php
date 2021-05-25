@@ -2,9 +2,7 @@
   session_start();
 
   if(isset($_SESSION['id'])) {
-    echo "Ciaooo ".$_SESSION['id']."<br>";
     ?>
-    <form action="logout.php" method="post"><input type="submit" value="Logout" /></form>
     <!DOCTYPE html >
 <head>
   <head>
@@ -43,7 +41,7 @@
       <div class="collapse navbar-collapse" id="collapseResponsive"></div>
       <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
           <li class="nav-item active ">
-              <a class="nav-link" href="#">Home</a></li>
+              <a class="nav-link" href="index.php">Home</a></li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">Appunti</a>
@@ -448,7 +446,7 @@
     <?php
 
 } else {
-    echo "Non hai accesso";
+    header("Location: noAccess.html");
     ?>
     <form action="login/index.php" method="post">
     <input type="submit" value="Login"/>
