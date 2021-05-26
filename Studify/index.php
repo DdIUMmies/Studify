@@ -26,12 +26,7 @@
 	<nav class="navbar navbar-light bg-light">
 	  <div class="container">
 		<a class="navbar-brand" href="index.html">
-		  <img
-			src="img/logo_small.png"
-			height="50"
-			alt=""
-			loading="lazy"
-		  />
+		  <img src="img/logo_small.png" height="50" alt="" loading="lazy"/>
 		</a>
 	  </div>
 	</nav>
@@ -48,7 +43,7 @@
 				<div class="dropdown-divider"></div>
 				
 		<li class="nav-item ">
-			<a class="nav-link" href="FAQ.html">FAQ</a></li>
+			<a class="nav-link" href="APPUNTI.html">Appunti</a></li>
 		<li class="nav-item ">
 			<a class="nav-link" href="#">Lavora con noi</a></li>
 			<?php
@@ -70,20 +65,12 @@
 	</ul>
 </nav>
 
-
-<!--FORST JUMBOtron -->
-
-
 <!---image--->
 <div class="jumbotron" style="height: 600px;  padding-top: 150px;" >
 <!-- search bar-->
 
-
 <h1 class="text-center" style="color: aliceblue;">La Rivoluzione degli appunti è appena iniziata!</h1>
 <p class="text-center" style="color: aliceblue;">Potenzia al meglio il tuo studio con la raccolta di appunti di Studify!</p>
-
-
-
 
 <div class="bmi">
 <div class="container">
@@ -133,15 +120,6 @@
 		</div>
 	</div>
 <br>
-<!-- <div class=" text-center">
-<a class="btn btn-primary" style="background-color: navy;"  href="login/index.html">Documenti</a></li>
-
-<a class="btn btn-primary" style="background-color: navy;" href="login/index.html">Appunti</a></li>
-<a class="btn btn-primary" style="background-color: navy;" href="login/index.html">Lezioni</a></li>
-</div>
--->
-
-
 
 </div>
 </div>
@@ -151,36 +129,6 @@
 <h2> &#128218 Trova ciò che cerchi navigando attraverso le nostre sezioni! &#128218</h2>
 </div>
 </div>
-<!--SECOND JUMBOTRON -->
-
- 
-<!--carousel -->
-
-
-<!--- Jumbotron -->
-
-
-
-
-<!--- Welcome Section -->
-
-
-<!--- Three Column Section -->
-
-
-<!--- Two Column Section -->
-
-
-<!--- Fixed background -->
-
-
-<!--- Emoji Section -->
-
-  
-<!--- Meet the team -->
-
-
-<!--- Cards -->
 
 
 <div class="bmi">
@@ -206,12 +154,12 @@
 			Il bello è che sono visionabili comodamente da casa. <br>
 		cosa aspetti, entra subito!</em>  </p>
 		<br>
-		<a href="#" class="btn btn-primary" style="background-color:navy;" >Videolezioni</a>
+		<a href="videoinfo.html" class="btn btn-primary" style="background-color:navy;" >Videolezioni</a>
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 		  </div>
 		</div>
 		<div class="card">
-		  <img class="card-img-top" src="/Studify/img/team2.png" alt="Card image cap">
+		  <img class="card-img-top" src="/Studify/img/discord.jpg" alt="Card image cap">
 		  <div class="card-body">
 			<h5 class="card-title">Server Studenti</h5>
 			<p class="card-text"><em>Entra nel server Discord, potrai studiare in compagnia nelle apposite stanze (testuali/vocali),
