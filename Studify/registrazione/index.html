@@ -11,83 +11,72 @@
         <link href="../stylelogin.css" rel="stylesheet">
         <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
     </head>
-    <body class="text-center">
-        <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
-            <nav class="navbar navbar-light bg-light">
-              <div class="container">
-                <a class="navbar-brand" href="index.html">
-                  <img
-                    src="../img/logo_small.png"
-                    height="50"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            </nav>
-        
-            </button>
-        
-            <div class="collapse navbar-collapse" id="collapseResponsive"></div>
-            <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
-            <li class="nav-item active ">
-                <a class="nav-link" href="../index.php">Home</a>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/Studify/profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false">Il mio account</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-                        <a class="dropdown-item" href="/Studify/profile.php">I tuoi appunti </a>
-                        <a class="dropdown-item" href="#">entra</a>
-                        <a class="dropdown-item" href="#">esci</a>
-                        <div class="dropdown-divider"></div>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false">Appunti</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-                        <a class="dropdown-item" href="#">Informatica</a>
-                        <a class="dropdown-item" href="#">Psicologia</a>
-                        <a class="dropdown-item" href="#">Economia</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Altre facoltà</a>
-                <li class="nav-item active ">
-                    <a class="nav-link" href="#">FAQ</a>
-                <li class="nav-item active ">
-                    <a class="nav-link" href="#">Lavora con noi</a>
-
-                </ul>
-        
-        
-            </div>
-        </nav>
-        <br>
-        <div class="row">
-            <div class="col-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <p class="card-text">
-                        <form method="POST" action="validateRegistration.php" name="myForm" class="form-signin">
-                            <h1> Registrati </h1>
-                            <input type="text" name="inputName" placeholder="Nome" class="form-control">
-                            
-                            <input type="text" name="inputSurname" class="form-control" placeholder="Cognome">
-                            
-                            <input type="text" class="form-control" name="inputUsername" placeholder="Nome Utente" required>
-                            
-                            <input type="email" class="form-control" name="inputEmail" placeholder="Email" required>
-                            
-                            <input type="password" class="form-control" name="inputPassword" placeholder="Password" required>
-                            <input type="text" class="form-control" name="inputUni" placeholder="Ateneo">
-                            <input type="text" class="form-control" name="inputCorso" placeholder="Corso di Studi">
-                            <br>
-                            <button class="btn btn-lg btn-primary btn-block" name="registrationButton" type="submit" >Iscriviti</button>
+ <!-- Navigation -->
+ <body class="text-center">
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="../index.php">
+            <img
+              src="../img/logo_small.png"
+              height="50"
+              alt=""
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </nav>
+  
+      </button>
+  
+      <div class="collapse navbar-collapse" id="collapseResponsive"></div>
+	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
+	  <li class="nav-item ">
+		<a class="nav-link" href="../index.php">Home</a></li>
+	  <li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle" href="/Studify/profile.htmlhb" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+		   aria-haspopup="true" aria-expanded="false">Il mio account</a>
+		<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+		  <a class="dropdown-item" href="../profile.php?name=$nome&surname=$cognome&emailadd=$email">I tuoi appunti </a>
+		  <div class="dropdown-divider"></div>
+		  
+	  <li class="nav-item ">
+		<a class="nav-link" href="../APPUNTI.html">Appunti</a></li>
+	  <li class="nav-item ">
+		<a class="nav-link" href="#">Lavora con noi</a></li>
+	</ul>
+      </div>
+  </nav>
+<br>
+<div class="row">
+  <div class="col-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <p class="card-text">
+          <form method="POST" action="validateRegistration.php" name="myForm" class="form-signin">
+            <h1> Registrati </h1>
+            <input type="text" name="inputName" placeholder="Nome" class="form-control">
             
-                        </form>
-                        <li class="nav-item active">    
-                            Hai già un account? Allora
-                            <a class="btn btn-primary" href="../login/index.php"> Accedi </a>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <input type="text" name="inputSurname" class="form-control" placeholder="Cognome">
+                            
+            <input type="text" class="form-control" name="inputUsername" placeholder="Nome Utente" required>
+                            
+            <input type="email" class="form-control" name="inputEmail" placeholder="Email" required>
+                            
+            <input type="password" class="form-control" name="inputPassword" placeholder="Password" required>
+            <input type="text" class="form-control" name="inputUni" placeholder="Ateneo">
+            <input type="text" class="form-control" name="inputCorso" placeholder="Corso di Studi">
+            <br>
+            <button class="btn btn-primary btn-block" style="background-color: navy;" name="registrationButton" type="submit" >Iscriviti</button>
+            
+          </form>
+            <li class="nav-item active">    
+             Hai già un account? Allora
+             <a class="btn btn-primary" style="background-color: navy;" href="../login/index.php"> Accedi </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
     </body>
 </html>
