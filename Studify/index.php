@@ -141,7 +141,7 @@
 				<br>
 				Sfoglia migliaia di documenti di ogni materia e facoltà!.<br>
 				Pensaci, è come avere una biblioteca portatile!</em></p>
-				<a href="/Studify/APPUNTI.html" style="background-color:navy;" class="btn btn-primary">Vai agli appunti</a>
+				<a href="/Studify/APPUNTI.html" style="background-color:lightgray;" class="btn btn-light">Vai agli appunti</a>
 
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 		  </div>
@@ -154,7 +154,7 @@
 			Il bello è che sono visionabili comodamente da casa. <br>
 		cosa aspetti, entra subito!</em>  </p>
 		<br>
-		<a href="videoinfo.html" class="btn btn-primary" style="background-color:navy;" >Videolezioni</a>
+		<a href="videoinfo.html" class="btn btn-light" style="background-color:lightgrey" >Videolezioni</a>
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 		  </div>
 		</div>
@@ -171,7 +171,7 @@
 			<br>
 
 			
-			<a href="https://discord.gg/hrwyUy7G9v" class="btn btn-primary" style="background-color:navy;">Vai al Server</a>
+			<a href="https://discord.gg/hrwyUy7G9v" class="btn btn-light" style="background-color:lightgray;">Vai al Server</a>
 
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 		  </div>
@@ -180,7 +180,7 @@
 </div>
 </div>
 <div class=" text-center">
-	<h2>  &#128104 &#8205 &#127891&#128218 Vivi la migliore esperienza di studio possibile.  &#128104 &#8205 &#127891 &#128218   </h2>
+	<h2>  Vivi la migliore esperienza di studio possibile.   </h2>
 	</div>
 	</div>
        
@@ -194,7 +194,7 @@
             <p class="lead">Da oggi cambia il modo di studiare, segui le videolezioni online, sfoglia migliaia di documenti e mettiti alla prova con i tuoi compagni! </p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="/Studify/img/team1.png" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="/Studify/img/ragazzoimmage.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
@@ -206,7 +206,7 @@
             <p class="lead">Studify vanta la più grande raccolta di documenti online di ogni facoltà!.</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="/Studify/img/team2.png" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="/Studify/img/student-school-boy-studying-computer-online-lesson-education-vector-concept-student-school-boy-studying-computer-114522764.jpg" alt="Generic placeholder image">
           </div>
         </div>
 

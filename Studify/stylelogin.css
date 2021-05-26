@@ -1,8 +1,9 @@
 .form-signin {
-    background-image: url('img/back.png');
+    background-color:white;
     padding : 30px;
     border-radius:10px; 
     box-shadow: 0px 0px 10px 0px #000;
+    
 }
 
 
@@ -25,3 +26,11 @@ input {
 #password {
     margin-bottom: 25px;
 }
+.container-fluid{
+    padding: 20px;
+    margin-top: 100px;
+  max-width: 500px;
+  height: 200px;
+
+}
+

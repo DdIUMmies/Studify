@@ -1,6 +1,7 @@
 <?php
   session_start();
 ?>
+ 
 
 <html>
     <head>
@@ -15,7 +16,12 @@
         <link href="../stylelogin.css" rel="stylesheet">
         <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
         <script type="text/javascript" lang="javascript" src="script.js"></script>
+        
     </head>
+
+
+    
+  
 
     <body class="text-center">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
@@ -47,13 +53,10 @@
 	  <li class="nav-item ">
 		<a class="nav-link" href="#">Lavora con noi</a></li>
 	</ul>
-        </nav>
-        <br>
-        <div class="row">
-            <div class="col-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <p class="card-text">
+</nav>
+<br>
+        <div class="container-fluid" >
+      
                         <form method="POST" action="login.php" class="form-signin" name="myForm" onsubmit="return validaForm()">
                             <h1> Accedi </h1>
                             <input type="email" name="inputEmail" placeholder="Email" class="form-control" required>
@@ -63,16 +66,36 @@
                                 <input type="checkbox" name="remember">
                                 <label for="remember">Ricordami per la prossima volta</label>
                             </div>
-                            <input class="btn btn-primary" name="loginButton" type="submit" style="background-color: navy;" value="Accedi"></input>
+                            <input class="btn btn-primary" name="loginButton"  style="background-color:navy"type="submit"  value="Accedi"></input>
+                            <br>
+                            
 
+                         
+                        
+
+                  
                         
                     </form>
+
                     <li class="nav-item active">    
-                        Non hai un account esistente? Allora
-                        <a class="btn btn-primary" style="background-color: navy;" href="../registrazione/index.html"> Registrati! </a>
-                  </p>
-                </div>
-              </div>
+             Hai già un account? Allora
+             <a class="btn btn-primary" style="background-color: navy;" href="../login/index.php"> Registrati </a>
+                    
+        </div>
+        <br>
+        
+        <br>
+        
+              
+
             </div>
+
     </body>
 </html>
+
+
+
+
+
+
+
