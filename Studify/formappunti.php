@@ -1,7 +1,7 @@
 <?php 
     $dbconn= pg_connect("host=localhost port=5432
-    dbname=Appunti_Studify
-    user=postgres password=1846839")
+    dbname=StudifyDB
+    user=postgres password=password")
     or die('Impossibile connettersi: '.pg_last_error());
     
 
@@ -40,7 +40,7 @@
 
         else
         {
-          echo "Il form è stato inviato con successo!";
+         // echo "Il form è stato inviato con successo!";
         }
     }
     
@@ -50,11 +50,12 @@
     $materia=$_POST['materia'];
     $descrizione=$_POST['descrizione_documento'];
     $file=$_FILES['userfile'];
+    $utente=$_POST['utente'];
 
-    $insert_into_db = pg_query($dbconn,"INSERT INTO appunti (materia, nome_documento, documento, descrizione, categoria, codice_corso_laurea)
-                            VALUES ('$materia','$titolo','$file','$descrizione','$categoria','$codice_corso_laurea')");
+    $insert_into_db = pg_query($dbconn,"INSERT INTO appunti (materia, nome_documento, documento, descrizione, categoria, codice_corso_laurea,utente)
+                            VALUES ('$materia','$titolo','$file','$descrizione','$categoria','$codice_corso_laurea','$utente')");
     if($insert_into_db){
-        echo("<br>Il documento è stato caricato correttamente");
+        header("Location: profile.php");
     } else{
         echo("<br>Caricamento non eseguito");
     }
