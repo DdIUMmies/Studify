@@ -16,15 +16,13 @@
         <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
         <script type="text/javascript" lang="javascript" src="script.js"></script>
     </head>
+
     <body class="text-center">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
             <nav class="navbar navbar-light bg-light">
               <div class="container">
-                <a class="navbar-brand" href="index.php">
-                  <img
-                    src="../img/logo_small.png"
-                    height="50"
-                    alt=""
+                <a class="navbar-brand" href="../index.php">
+                  <img src="../img/logo_small.png" height="50" alt="" 
                     loading="lazy"
                   />
                 </a>
@@ -34,35 +32,21 @@
             </button>
         
             <div class="collapse navbar-collapse" id="collapseResponsive"></div>
-            <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
-            <li class="nav-item active ">
-                <a class="nav-link" href="../index.php">Home</a>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="../profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false">Il mio account</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-                        <a class="dropdown-item" href="../profile.php">I tuoi appunti </a>
-                        <a class="dropdown-item" href="#">entra</a>
-                        <a class="dropdown-item" href="#">esci</a>
-                        <div class="dropdown-divider"></div>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
-                         aria-haspopup="true" aria-expanded="false">Appunti</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-                        <a class="dropdown-item" href="#">Informatica</a>
-                        <a class="dropdown-item" href="#">Psicologia</a>
-                        <a class="dropdown-item" href="#">Economia</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Altre facoltà</a>
-                
-                <li class="nav-item active ">
-                    <a class="nav-link" href="#">FAQ</a>
-                <li class="nav-item active ">
-                    <a class="nav-link" href="#">Lavora con noi</a>
-                </ul>
-        
-        
-            </div>
+	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
+	  <li class="nav-item ">
+		<a class="nav-link" href="../index.php">Home</a></li>
+	  <li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle" href="/Studify/profile.html" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+		   aria-haspopup="true" aria-expanded="false">Il mio account</a>
+		<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+		  <a class="dropdown-item" href="profile.php?name=$nome&surname=$cognome&emailadd=$email">I tuoi appunti </a>
+		  <div class="dropdown-divider"></div>
+		  
+	  <li class="nav-item ">
+		<a class="nav-link" href="APPUNTI.html">Appunti</a></li>
+	  <li class="nav-item ">
+		<a class="nav-link" href="#">Lavora con noi</a></li>
+	</ul>
         </nav>
         <br>
         <div class="row">
@@ -79,13 +63,13 @@
                                 <input type="checkbox" name="remember">
                                 <label for="remember">Ricordami per la prossima volta</label>
                             </div>
-                            <input class="btn btn-lg btn-primary" name="loginButton" type="submit" style="width: auto;" value="Accedi"></input>
+                            <input class="btn btn-primary" name="loginButton" type="submit" style="background-color: navy;" value="Accedi"></input>
 
                         
                     </form>
                     <li class="nav-item active">    
                         Non hai un account esistente? Allora
-                        <a class="btn btn-primary" href="../registrazione/index.html"> Registrati! </a>
+                        <a class="btn btn-primary" style="background-color: navy;" href="../registrazione/index.html"> Registrati! </a>
                   </p>
                 </div>
               </div>
