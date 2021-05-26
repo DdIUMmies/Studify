@@ -221,7 +221,7 @@
                 <img class="card-img-top" src="/Studify/img/basididati.jpg"  alt="Basi di Dati ">
               
                 <div class="card-body">
-                  <h5 > Libro Basi di Dati</h5>
+                  <h5 >Libro Basi di Dati</h5>
                   <p class="card-text">Libro di Basi di dati del corso di informatica presso la sapienza.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
