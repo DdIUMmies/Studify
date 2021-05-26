@@ -36,7 +36,7 @@
 	<div class="collapse navbar-collapse" id="collapseResponsive"></div>
 	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
 		<li class="nav-item ">
-			<a class="nav-link" aria-current="page" href="#">Home</a></li>
+			<a class="nav-link" aria-current="page" href="index.php">Home</a></li>
 		<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle active" href="/Studify/profile.htmlhb" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
 				 aria-haspopup="true" aria-expanded="false">Il mio account</a>
