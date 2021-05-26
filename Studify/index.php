@@ -1,5 +1,6 @@
 <?php
 	session_start();
+            
 ?>
 
 <!DOCTYPE html>
@@ -53,8 +54,7 @@
 			<?php
 				if(isset($_SESSION['id'])) {
 					?>
-					<li class="nav-item active">
-					<a class="nav-link" href="profile.php"> Account </a>
+					<a class="nav-link" href="profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita"> Il tuo Account </a>
 					<li class="nav-item active">
               			<form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
 				<?php
@@ -278,15 +278,34 @@
 		<!-- Discord -->
 		<a class="btn btn-outline-dark btn-floating m-1" href="https://discord.gg/hrwyUy7G9v" role="button"
 		  ><i class="fab fa-discord"></i
+		
+		<!-- Facebook -->
+		<a class="btn btn-outline-dark btn-floating m-1" href="https://www.facebook.com/" role="button"
+		  ><i class="fab fa-facebook-f"></i
+		></a>
+  
+		<!-- Twitter -->
+		<a class="btn btn-outline-dark btn-floating m-1" href="https://twitter.com/?lang=it" role="button" 
+		  ><i class="fab fa-twitter"></i
+		></a>
+  
+		<!-- Google -->
+		<a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+		  ><i class="fab fa-google"></i
 		></a>
   
 		<!-- Instagram -->
-		<a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+		<a class="btn btn-outline-dark btn-floating m-1" href="https://www.instagram.com/" role="button"
 		  ><i class="fab fa-instagram"></i
 		></a>
   
+		<!-- Linkedin -->
+		<a class="btn btn-outline-dark  btn-floating m-1" href="https://it.linkedin.com/" role="button"
+		  ><i class="fab fa-linkedin-in"></i
+		></a>
+  
 		<!-- Github -->
-		<a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+		<a class="btn btn-outline-dark btn-floating m-1" href="https://github.com/DdIUMmies/Studify" role="button"
 		  ><i class="fab fa-github"></i
 		></a>
 	  </section>
@@ -319,9 +338,9 @@
 
 	  <section class="mb-4">
 		<p>
-			Sappiamo quanto siano fondamentali dei buoni appunti per prepararsi bene ad un esame. Il sito è interamente pensato
-			e gestito da studenti come te, con le tue stesse esigenze. Se desideri altre informazioni non esitare a iscriverti alla
-			newsletter!
+		  Questo sito è stato progettato per il corso di linguaggi e tecnologie per il web del corso di laurea in Ingegneria 
+		  Informatica de La Sapienza di Roma. Anche se è stato fatto a scopo didattico, i contenuti sono proprietà intellettuale dei suoi creatori e ne è vietata la duplicazione 
+		  (parziale o totale) senza l'esplicito consenso di essi.
 		</p>
 	  </section>
 

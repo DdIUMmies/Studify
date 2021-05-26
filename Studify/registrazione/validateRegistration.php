@@ -17,7 +17,7 @@
                 if ($line=pg_fetch_array($result, null, PGSQL_ASSOC)) {
                     echo("<script LANGUAGE='JavaScript'>
                         window.alert('Esiste già un account registrato con questa email! Premi OK per essere reindirizzato alla pagina di Log In!');
-                        window.location.href='../login/index.html';
+                        window.location.href='../login/index.php';
                         </script>");
                 }
                 else {
@@ -33,7 +33,7 @@
                     if ($data) {
                         echo("<script LANGUAGE='JavaScript'>
                         window.alert('Registrazione completata. Benvenenuto in Studify! Premi OK per essere reindirizzato alla pagina di Log In!');
-                        window.location.href='../login/index.html';
+                        window.location.href='../login/index.php';
                         </script>");
                     }
 
