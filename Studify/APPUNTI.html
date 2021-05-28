@@ -10,6 +10,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script type="text/javascript" lang="javascript" src="script.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
   </head>
@@ -47,17 +50,24 @@
         <a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
     </ul>
   </nav>
+  <br>
+  <div class="jumbotron-fluid">
+    <div class="text-center" data-aos="zoom-in-out">
+  <h3> Sezione Appunti</h3>
+</div>
+</div>
+  <br>
 
     <!-- CARDS -->
     <br>
       <div class="row">
-        <div class="col-4">
-          <div class="card h-100">
+        <div class="col-4" data-aos="flip-left" >
+          <div class="card h-100"  >
             <img
               src="img/Sezione Appunti/Informatica.png"
               class="card-img-top"
               alt="..."/>
-            <div class="card-body">
+            <div class="card-body" >
               <h5 class="card-title">Informatica</h5>
               <p class="card-text">
                 Qui potrai trovare tutti gli appunti riguardanti la facoltà di Informatica. Gli appunti 
@@ -71,7 +81,7 @@
           </div>
         </div>
         <div class="col-4">
-          <div class="card h-100">
+          <div class="card h-100" data-aos="flip-left">
             <img
               src="img/Sezione Appunti/Psicologia.jpg"
               class="card-img-top"
@@ -90,7 +100,7 @@
           </div>
         </div>
         <div class="col-4">
-          <div class="card h-100">
+          <div class="card h-100" data-aos="flip-left">
             <img
               src="img/Sezione Appunti/Economia.jfif"
               class="card-img-top"
@@ -197,3 +207,12 @@
   </footer>
 </body>
 </html>
+
+<script>
+  AOS.init({
+   duration:1000,
+   offset:120,
+   easing: 'ease-in-out'
+
+ });
+ </script>

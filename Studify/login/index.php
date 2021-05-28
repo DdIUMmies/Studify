@@ -36,8 +36,9 @@
             </nav>
         
             </button>
+
         
-            <div class="collapse navbar-collapse" id="collapseResponsive"></div>
+<div class="collapse navbar-collapse" id="collapseResponsive"></div>
 	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
 	  <li class="nav-item ">
 		<a class="nav-link" href="../index.php">Home</a></li>

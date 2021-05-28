@@ -14,7 +14,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<script type="text/javascript" lang="javascript" src="script.js"></script>
+	<scrip type="text/javascript" lang="javascript" src="script.js"></script>
+	<script> src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"</script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"</script>
+
 	<link href="style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
 </head>
@@ -124,7 +130,7 @@
 </div>
 </div>
 
-<div class=" text-center">
+<div class=" text-center"data-aos="fade-up">
 <div class="jumbotron" style="background-image: url();">
 <h2> &#128218 Trova ciò che cerchi navigando attraverso le nostre sezioni! &#128218</h2>
 </div>
@@ -132,8 +138,8 @@
 
 
 <div class="bmi">
-	<div class="card-deck">
-		<div class="card">
+	<div class="card-deck" >
+		<div class="card" data-aos="flip-left">
 		  <img class="card-img-top" src="/Studify/img/home2.png" alt="Card image cap">
 		  <div class="card-body">
 			<h5 class="card-title">Appunti & Libri</h5>
@@ -146,7 +152,7 @@
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 		  </div>
 		</div>
-		<div class="card">
+		<div class="card" data-aos="flip-left">
 		  <img class="card-img-top" src="/Studify/img/home1.png" alt="Card image cap">
 		  <div class="card-body">
 			<h5 class="card-title">Videolezioni</h5>
@@ -158,7 +164,7 @@
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 		  </div>
 		</div>
-		<div class="card">
+		<div class="card" data-aos="flip-left">
 		  <img class="card-img-top" src="/Studify/img/discord.jpg" alt="Card image cap">
 		  <div class="card-body">
 			<h5 class="card-title">Server Studenti</h5>
@@ -179,14 +185,15 @@
 	  </div>
 </div>
 </div>
-<div class=" text-center">
+<div class=" text-center" data-aos="fade-up" >
 	<h2>  Vivi la migliore esperienza di studio possibile.   </h2>
 	</div>
-	</div>
+	
        
 <div class="bmi">
+	<div data-aos="fade-right">
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider" data-aos="slide-right">
 
         <div class="row featurette">
           <div class="col-md-7">
@@ -194,19 +201,23 @@
             <p class="lead">Da oggi cambia il modo di studiare, segui le videolezioni online, sfoglia migliaia di documenti e mettiti alla prova con i tuoi compagni! </p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="/Studify/img/ragazzoimmage.jpg" alt="Generic placeholder image">
+            <img  data-aos="zoom-in-up"class="featurette-image img-fluid mx-auto" src="/Studify/img/ragazzoimmage.jpg" alt="Generic placeholder image">
           </div>
         </div>
+	</div>
+	
 
         <hr class="featurette-divider">
+		
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">L'unico ed inimitabile</h2>
-            <p class="lead">Studify vanta la più grande raccolta di documenti online di ogni facoltà!.</p>
+				<hr data-aos="slide-right">
+            <h2 data-aos="slide-right" class="featurette-heading">L'unico ed inimitabile</h2>
+            <p  data-aos="slide-right" class="lead">Studify vanta la più grande raccolta di documenti online di ogni facoltà!.</p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="/Studify/img/student-school-boy-studying-computer-online-lesson-education-vector-concept-student-school-boy-studying-computer-114522764.jpg" alt="Generic placeholder image">
+            <img  data-aos="zoom-out-right" class="featurette-image img-fluid mx-auto" src="/Studify/img/student-school-boy-studying-computer-online-lesson-education-vector-concept-student-school-boy-studying-computer-114522764.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
@@ -300,3 +311,12 @@
   </footer>
 </body>
 </html>
+
+<script>
+	 AOS.init({
+		duration:1000,
+		offset:120,
+		easing: 'ease-in-out'
+
+	});
+	</script>
