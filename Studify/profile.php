@@ -49,7 +49,7 @@
 		<li class="nav-item ">
 			<a class="nav-link" href="#">Lavora con noi</a></li>
               <a class="nav-link" href="registrazione/index.html" > <?php
-            $username=$_GET['user'];
+            $username=$_SESSION['username'];
             echo "$username";
             ?>  </a></li>
           <li class="nav-item active">
@@ -64,7 +64,7 @@
       <div class="text-center">
           <h2>Buongiorno 
             <?php
-            $username=$_GET['user'];
+            $username=$_SESSION['username'];
             echo "$username";
             ?> 
             &#128104;&#8205;&#127891; </h2></div>
@@ -89,15 +89,15 @@
                       <div class="mt-3">
                         <h4>
                           <?php
-                            $username=$_GET['user'];
+                            $username=$_SESSION['username'];
                             echo "$username";
                           ?> 
                         </h4>
                         <p class="text-secondary mb-1">Studente di <?php
-                            $corso=$_GET['cor'];
+                            $corso=$_SESSION['corso'];
                             echo "$corso";
                           ?> presso <?php
-                          $universita=$_GET['uni'];
+                          $universita=$_SESSION['universita'];
                           echo "$universita";
                         ?> </p>
                         
@@ -138,8 +138,8 @@
                       </div>
                       <div class="col-sm-9 text-secondary">
                         <?php
-                          $nome=$_GET['name'];
-                          $cognome=$_GET['surname'];
+                          $nome=$_SESSION['nome'];
+                          $cognome=$_SESSION['cognome'];
                           echo "$cognome, $nome";
                         ?> 
                       </div>
@@ -151,7 +151,7 @@
                       </div>
                       <div class="col-sm-9 text-secondary">
                         <?php
-                          $universita=$_GET['uni'];
+                          $universita=$_SESSION['universita'];
                           echo "$universita";
                         ?> 
                       </div>
@@ -163,7 +163,7 @@
                       </div>
                       <div class="col-sm-9 text-secondary">
                         <?php
-                          $corso=$_GET['cor'];
+                          $corso=$_SESSION['corso'];
                           echo "$corso";
                         ?> 
                       </div>
@@ -177,7 +177,7 @@
                       </div>
                       <div class="col-sm-9 text-secondary">
                         <?php
-                            $email=$_GET['emailadd'];
+                            $email=$_SESSION['email'];
                             echo "$email";
                         ?> 
                       </div>

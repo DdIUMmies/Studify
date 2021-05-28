@@ -43,6 +43,13 @@
                     $username=$line['username'];
                     $universita=$line['universita'];
                     $corso=$line['corso'];
+                    $_SESSION['email']=$email;
+                    $_SESSION['nome']=$nome;
+                    $_SESSION['cognome']=$cognome;
+                    $_SESSION['universita']=$universita;
+                    $_SESSION['corso']=$corso;
+                    $_SESSION['username']=$username;
+
                     header("Location: ../profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita");
                 
                 }
