@@ -91,7 +91,7 @@
                 Qui potrai trovare tutti gli appunti riguardanti la facoltà di Informatica. Gli appunti 
                 possono variare in base al programma e al professore quindi attento!
               </p>
-              <a class="btn btn-primary" style="background-color: navy;" href="">Vai agli appunti</a>
+              <a class="btn btn-primary" style="background-color: navy;" href="/Studify/informatica.html">Vai agli appunti</a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Ultimo aggiornamento 4 min fa</small>
@@ -110,7 +110,7 @@
                 Qui potrai trovare tutti gli appunti riguardanti la facoltà di Psicologia. Gli appunti 
                 possono variare in base al programma e al professore quindi attento!
               </p>
-              <a class="btn btn-primary" style="background-color: navy;" href="#" >Vai agli appunti</a>
+              <a class="btn btn-primary" style="background-color: navy;" href="/Studify/psicologia.html" >Vai agli appunti</a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Ultimo aggiornamento 3 min fa</small>
@@ -129,7 +129,7 @@
                 Qui potrai trovare tutti gli appunti riguardanti la facoltà di Psicologia. Gli appunti 
                 possono variare in base al programma e al professore quindi attento!
               </p>
-              <a class="btn btn-primary" style="background-color: navy;" href="#">Vai agli appunti</a>
+              <a class="btn btn-primary" style="background-color: navy;" href="/Studify/economia.html">Vai agli appunti</a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Ultimo aggiornamento 2 min fa</small>
