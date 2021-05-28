@@ -60,26 +60,17 @@
                         <form method="POST" action="login.php" class="form-signin" name="myForm" onsubmit="return validaForm()">
                             <h1> Accedi </h1>
                             <input type="email" name="inputEmail" placeholder="Email" class="form-control" required>
-                            <input type="password" name="inputPassword" placeholder="Password" class="form-control" required>
-                            
+                            <input type="password" name="inputPassword" placeholder="Password" class="form-control" required autofocus>
                             <div id="divRemember" class="checkbox mb-3">
                                 <input type="checkbox" name="remember">
                                 <label for="remember">Ricordami per la prossima volta</label>
                             </div>
                             <input class="btn btn-primary" name="loginButton"  style="background-color:navy"type="submit"  value="Accedi"></input>
-                            <br>
-                            
-
-                         
-                        
-
-                  
-                        
                     </form>
 
                     <li class="nav-item active">    
              Hai già un account? Allora
-             <a class="btn btn-primary" style="background-color: navy;" href="../login/index.php"> Registrati </a>
+             <a class="btn btn-primary" style="background-color: navy;" href="../registrazione/index.html"> Registrati </a>
                     
         </div>
         <br>

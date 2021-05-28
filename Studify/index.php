@@ -1,6 +1,6 @@
 <?php
 	session_start();
-            
+    
 ?>
 
 <!DOCTYPE html>
@@ -48,18 +48,9 @@
 			<a class="nav-link" href="#">Lavora con noi</a></li>
 			<?php
 				if(isset($_SESSION['id'])) {
-					$dbconn= pg_connect("host=localhost port=5432
-           				dbname=StudifyDB
-            			user=postgres password=password")
-            		or die('Impossibile connettersi: '.pg_last_error());
 					
-					$email="marco@gmaill.com";
-					$q1="select * from utenti where email=$1";
-					$result = pg_query_params($dbconn, $q1, array($email));
-					$line=pg_fetch_array($result,null,PGSQL_ASSOC);
-					$username=$line['username'];
 					?>
-					<a class="nav-link" href="profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita"> Il tuo Account </a>
+					<a class="nav-link" href="profile.php"> <?php echo($_SESSION['username']) ?> </a>
 					<li class="nav-item active">
               			<form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
 				<?php
