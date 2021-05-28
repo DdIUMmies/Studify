@@ -226,7 +226,7 @@
                 <img class="card-img-top" src="/Studify/img/basididati.jpg"  alt="Basi di Dati ">
               
                 <div class="card-body">
-                  <h5 ><?php $query_titolo="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                  <h5 ><?php $query_titolo="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
                     $result1=pg_query($dbconn,$query_titolo);
                     $titolo=pg_fetch_array($result1,null,PGSQL_NUM);
                     echo $titolo[0];?></p></h5>
