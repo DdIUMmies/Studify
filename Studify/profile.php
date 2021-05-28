@@ -45,10 +45,10 @@
 				<div class="dropdown-divider"></div>
 				
 		<li class="nav-item ">
-			<a class="nav-link" href="APPUNTI.html">Appunti</a></li>
+			<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
 		<li class="nav-item ">
 			<a class="nav-link" href="#">Lavora con noi</a></li>
-              <a class="nav-link" href="registrazione/index.html" > <?php
+              <a class="nav-link" href="profile.php" > <?php
             $username=$_SESSION['username'];
             echo "$username";
             ?>  </a></li>
