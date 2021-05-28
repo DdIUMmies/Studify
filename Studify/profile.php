@@ -3,7 +3,11 @@
 
   if(isset($_SESSION['id'])) {
     ?>
-    <!DOCTYPE html >
+<?php $dbconn= pg_connect("host=localhost port=5432
+    dbname=StudifyDB
+    user=postgres password=password")
+    or die('Impossibile connettersi: '.pg_last_error());?>
+<!DOCTYPE html >
 <head>
   <head>
     <meta charset="utf-8">
@@ -221,8 +225,15 @@
                 <img class="card-img-top" src="/Studify/img/basididati.jpg"  alt="Basi di Dati ">
               
                 <div class="card-body">
-                  <h5 >Libro Basi di Dati</h5>
-                  <p class="card-text">Libro di Basi di dati del corso di informatica presso la sapienza.</p>
+                  <h5 ><?php $query_titolo="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result1=pg_query($dbconn,$query_titolo);
+                    $titolo=pg_fetch_array($result1,null,PGSQL_NUM);
+                    echo $titolo[0];?></p></h5>
+                  <p class="card-text">
+                  <?php $query_descr="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result=pg_query($dbconn,$query_descr);
+                    $descr=pg_fetch_array($result,null,PGSQL_NUM);
+                    echo $descr[0];?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary" >Visualizza</button>
