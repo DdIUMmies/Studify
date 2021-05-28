@@ -17,6 +17,7 @@
     <link href="profile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Studify/all.css">
     <script src="https://kit.fontawesome.com/797356307c.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
@@ -227,7 +228,11 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary" >Visualizza</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Modifica</button>
-                      <button class="btn btn-outline-primary"><i class="fa fa-heart" aria-hidden="true"></i>
+                      <div>
+                      <i class="fa fa-heart"></i>
+                      </div>
+                                          
+
                     </div>
                     <small class="text-muted">ora</small>
                   </div>
@@ -399,4 +404,15 @@
 }
 ?>
 
+<!----JAVASCRIPT & JQUERY-->
 
+<script>
+
+$(".star.glyphicon").click(function() {
+  $(this).toggleClass("glyphicon-star glyphicon-star-empty");
+});
+
+$(".heart.fa").click(function() {
+  $(this).toggleClass("fa-heart fa-heart-o");
+});
+</script>

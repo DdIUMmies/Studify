@@ -1,6 +1,6 @@
 <?php
 	session_start();
-    
+            
 ?>
 
 <!DOCTYPE html>
@@ -54,9 +54,8 @@
 			<a class="nav-link" href="#">Lavora con noi</a></li>
 			<?php
 				if(isset($_SESSION['id'])) {
-					
 					?>
-					<a class="nav-link" href="profile.php"> <?php echo($_SESSION['username']) ?> </a>
+					<a class="nav-link" href="profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita"> Il tuo Account </a>
 					<li class="nav-item active">
               			<form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
 				<?php
@@ -165,7 +164,7 @@
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 		  </div>
 		</div>
-		<div class="card" data-aos="flip-left">
+		<div class="card"data-aos="flip-left"  >
 		  <img class="card-img-top" src="/Studify/img/discord.jpg" alt="Card image cap">
 		  <div class="card-body">
 			<h5 class="card-title">Server Studenti</h5>
@@ -198,8 +197,8 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Migliora il tuo workflow </h2>
-            <p class="lead">Da oggi cambia il modo di studiare, segui le videolezioni online, sfoglia migliaia di documenti e mettiti alla prova con i tuoi compagni! </p>
+            <h2 class="featurette-heading" data-aos="slide-right"  >Migliora il tuo workflow </h2>
+            <p class="lead" data-aos="slide-right">Da oggi cambia il modo di studiare, segui le videolezioni online, sfoglia migliaia di documenti e mettiti alla prova con i tuoi compagni! </p>
           </div>
           <div class="col-md-5">
             <img  data-aos="zoom-in-up"class="featurette-image img-fluid mx-auto" src="/Studify/img/ragazzoimmage.jpg" alt="Generic placeholder image">
@@ -214,8 +213,8 @@
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
 				<hr data-aos="slide-right">
-            <h2 data-aos="slide-right" class="featurette-heading">L'unico ed inimitabile</h2>
-            <p  data-aos="slide-right" class="lead">Studify vanta la più grande raccolta di documenti online di ogni facoltà!.</p>
+            <h2 data-aos="slide-left" class="featurette-heading">L'unico ed inimitabile</h2>
+            <p  data-aos="slide-left" class="lead">Studify vanta la più grande raccolta di documenti online di ogni facoltà!.</p>
           </div>
           <div class="col-md-5 order-md-1">
             <img  data-aos="zoom-out-right" class="featurette-image img-fluid mx-auto" src="/Studify/img/student-school-boy-studying-computer-online-lesson-education-vector-concept-student-school-boy-studying-computer-114522764.jpg" alt="Generic placeholder image">

@@ -9,7 +9,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<script type="text/javascript" lang="javascript" src="script.js"></script>
+	<scrip type="text/javascript" lang="javascript" src="script.js"></script>
+	<script> src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"</script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"</script>
+
 	<link href="style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
 </head>
@@ -55,68 +61,84 @@
     </div>
 </h2>
 
+
+
 <br>
 <div class="container">
-<a href="/Studify/listedoc1.html"><button type="button" class="btn btn-light"> ◀ Torna Indietro </button></a>
+<a href="/Studify//informatica.html"><button type="button" class="btn btn-light"> ◀ Torna Indietro </button></a>
 </div>
 <br>
 <br>
 
 
-
-<div class="container">
-    <div class="card-fluid">
- 
-    <div class="text" style="margin-left: 250px;">
-    <h5>Fondamenti di programmazione </h5>
-</div>
-
-    <br>
-    <video width="600" height="400" controls style="margin-left: 250px;">
-    <source src="/" type="video/mp4">
-    <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-  
-  </video>
-  
-  <div class="text" style="margin-left: 250px;">
-    <br>
-    <h6>Descrizione:</h6>
-    <p>Ho trovato questo video molto interessante spero che possa servire a qualcuno 
-        questo andrebbe fatto via server
-    </p>
-      
-  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></div>
-</div>
-</div>
-<br>
-<br>
-<div class="container">
-    <div class="text" style="margin-left: 250px;">
-    <h5>Fondamenti di programmazione </h5>
-</div>
-
-    <br>
-    <video width="600" height="400" controls style="margin-left: 250px;">
-    <source src="/" type="video/mp4">
-    <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-  
-  </video>
-  
-  <div class="text" style="margin-left: 250px;">
-    <br>
-    <h6>
-        Descrizione:
-    </h6>
-    <p>Ho trovato questo video molto interessante spero che possa servire a qualcuno 
-    questo andrebbe fatto via server
+<div class="container" data-aos="slide-left" >
+	<div class="card-fluid" >
+		<div class="text">
+			<h3> Descrizione</h3>
+<p>Benvenuto nella sezione video Studfy.
+	Qua troverai tutti i video preferiti della community.
+	Cosa aspetti sfoglia ora!
 </p>
-      
-  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></div>
-</div>
+		</div>
+	</div>
 
-  <br>
+<br>
+<br>
+
+
+
+
+	<div class="container" data-aos="slide-left" >
+		<div class="card-fluid" style ="margin-left: 250px;">
+			<div class="text">
+				<h4>Bitcoin and criptocurrency</h4>
+			</div>
+			<br>
+
+  <iframe src="https://www.youtube.com/embed/WO-O2K_Fqw0"
+
+   width="600" height="400"  frameborder="33" allowfullscreen></iframe>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row"></div>
+
+	<div class="container">
+		<div class="card-fluid"data-aos="slide-left" style ="margin-left: 250px;">
+			<div class="text">
+				<h4>DFS Algorithm</h4>
+			</div>
+			<br>
+  <iframe src="  https://www.youtube.com/embed/7fujbpJ0LB4"
+
+   width="600" height="400"  frameborder="33" allowfullscreen></iframe>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row"></div>
+
+	<div class="container">
+		<div class="card-fluid" data-aos="slide-left" style ="margin-left: 250px;">
+			<div class="text">
+				<h4>La legge di Moore</h4>
+			</div>
+			<br>
+  <iframe src="  https://www.youtube.com/embed/It4YlG-emew"
+
+   width="600" height="400"  frameborder="33" allowfullscreen></iframe>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row"></div>
+
+
+<br>
+<br>
+
+
 
 
 <!---                                   Footer                                     -->
@@ -203,7 +225,14 @@
 </body>
 </html>
 
-<script>
 
-$().button('dispose')
-</script>
+
+
+<script>
+	AOS.init({
+	   duration:1000,
+	   offset:120,
+	   easing: 'ease-in-out'
+
+   });
+   </script>
