@@ -50,7 +50,7 @@
 		  <div class="dropdown-divider"></div>
 		  
 	  <li class="nav-item ">
-		<a class="nav-link" href="APPUNTI.html">Appunti</a></li>
+		<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
 	  <li class="nav-item ">
 		<a class="nav-link" href="#">Lavora con noi</a></li>
 	</ul>
