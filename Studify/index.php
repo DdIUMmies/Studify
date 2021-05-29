@@ -1,6 +1,5 @@
 <?php
-	session_start();
-            
+	session_start();          
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +13,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<scrip type="text/javascript" lang="javascript" src="script.js"></script>
+	<script type="text/javascript" lang="javascript" src="script.js"></script>
 	<script> src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"</script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -40,37 +39,34 @@
 	<div class="collapse navbar-collapse" id="collapseResponsive"></div>
 	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
 		<li class="nav-item ">
-			<a class="nav-link active" aria-current="page" href="#">Home</a></li>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="/Studify/profile.htmlhb" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
-				 aria-haspopup="true" aria-expanded="false">Il mio account</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-				<a class="dropdown-item" href="profile.php?name=$nome&surname=$cognome&emailadd=$email">I tuoi appunti </a>
-				<div class="dropdown-divider"></div>
+			<a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
 				
 		<li class="nav-item ">
 			<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
 		<li class="nav-item ">
 			<a class="nav-link" href="#">Lavora con noi</a></li>
 			<?php
-				if(isset($_SESSION['id'])) {
-					?>
-					<a class="nav-link" href="profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita">
-						<?php $username=$_SESSION['username'];
-						echo "$username";?>
-					</a>
-					<li class="nav-item active">
-              			<form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
-				<?php
-				}
-				else {
-					?>
-					<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
-					<li class="nav-item active">
-					<a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
+					if(isset($_SESSION['id'])) {
+						
+						?>
+					    <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false"> <?php echo($_SESSION['username']) ?> </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+							<a class="dropdown-item" href="profile.php"> Il tuo profilo </a>
+						</li>
+						<li class="nav-item active">
+							  <form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
 					<?php
-				}
-				?>	
+					}
+					else {
+						?>
+						<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
+						<li class="nav-item active">
+						<a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
+						<?php
+					}
+					?>	
 	</ul>
 </nav>
 
@@ -98,14 +94,16 @@
 							<li class="primo">
 									Informatica
 										<ul class="sub-menu">
-											<li class="dropdown-item" href="#">Appunti Informatica
+											<li class="dropdown-item" href="informatica.php">
+											<a  href="informatica.php" >Appunti Informatica </a>
 												<ul class="sub-menu">
 													<li class="dropdown-item" href="#"> Ingegneria del Software </li>
 													<li class="dropdown-item" href="#"> Basi di Dati II </li>
 												</ul>
 											</li>
-											<li class="dropdown-item" href="#">Video Informatica</li>
-											<li class="dropdown-item" href="#">FAQ Informatica</li>
+											<li class="dropdown-item" href="videoinfo.html">
+												<a href="videoinfo.html"> Video Informatica</a>
+											</li>
 										</ul>
 							</li>
 							<li class="primo">
@@ -114,7 +112,6 @@
 											<li class="dropdown-item" href="#">Appunti Economia</li>
 											<li class="dropdown-item" href="#">Video Economia</li>
 											<li class="dropdown-item" href="#">FAQ Economia</li>
-											<li class="dropdown-item">                        </li>
 										</ul>	
 							<li class="primo">
 									Psicologia
@@ -124,7 +121,7 @@
 											<li class="dropdown-item" href="#">FAQ Psicologia</li>
 										</ul>
 						</ul>
-					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -150,7 +147,7 @@
 				<br>
 				Sfoglia migliaia di documenti di ogni materia e facoltà!.<br>
 				Pensaci, è come avere una biblioteca portatile!</em></p>
-				<a href="/Studify/APPUNTI.html" style="background-color:lightgray;" class="btn btn-light">Vai agli appunti</a>
+				<a href="/Studify/APPUNTI.php" style="background-color:lightgray;" class="btn btn-light">Vai agli appunti</a>
 
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 		  </div>

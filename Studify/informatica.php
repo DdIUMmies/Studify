@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,33 +35,45 @@
  <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
 	<nav class="navbar navbar-light bg-light">
 	  <div class="container">
-	  <a class="navbar-brand" href="index.html">
-		<img src="img/logo_small.png" height="50" alt="" loading="lazy" />
-	  </a>
+		<a class="navbar-brand" href="index.php">
+		  <img src="img/logo_small.png" height="50" alt="" loading="lazy"/>
+		</a>
 	  </div>
 	</nav>
-  
+
 	<div class="collapse navbar-collapse" id="collapseResponsive"></div>
 	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
-	  <li class="nav-item ">
-		<a class="nav-link" href="index.php">Home</a></li>
-	  <li class="nav-item dropdown">
-		<a class="nav-link dropdown-toggle" href="/Studify/profile.htmlhb" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
-		   aria-haspopup="true" aria-expanded="false">Il mio account</a>
-		<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-		  <a class="dropdown-item" href="profile.php?name=$nome&surname=$cognome&emailadd=$email">I tuoi appunti </a>
-		  <div class="dropdown-divider"></div>
-		  
-	  <li class="nav-item ">
-		<a class="nav-link active" aria-current="page" href="APPUNTI.html">Appunti</a></li>
-	  <li class="nav-item ">
-		<a class="nav-link" href="#">Lavora con noi</a></li>
-	  <li class="nav-item">
-		<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
-	  <li class="nav-item active">
-		<a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
+		<li class="nav-item ">
+			<a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+				
+		<li class="nav-item ">
+			<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
+		<li class="nav-item ">
+			<a class="nav-link" href="#">Lavora con noi</a></li>
+			<?php
+					if(isset($_SESSION['id'])) {
+						
+						?>
+					    <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false"> <?php echo($_SESSION['username']) ?> </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+							<a class="dropdown-item" href="profile.php"> Il tuo profilo </a>
+						</li>
+						<li class="nav-item active">
+							  <form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
+					<?php
+					}
+					else {
+						?>
+						<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
+						<li class="nav-item active">
+						<a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
+						<?php
+					}
+					?>	
 	</ul>
-  </nav>
+</nav>
 
 <br>
 
@@ -66,7 +82,7 @@
     <h1>Informatica </h1>
     </div>
     <br>
-    <a href="/Studify/APPUNTI.html"><button type="button" class="btn btn-light"> ◀ Torna Indietro </button></a>
+    <a href="/Studify/APPUNTI.php"><button type="button" class="btn btn-light"> ◀ Torna Indietro </button></a>
     <a href="/Studify/videoinfo.html"><button type="button-" class="btn btn-light"> Videolezioni 💻</button></a>
     <br>
     <br>
@@ -80,7 +96,7 @@
                 <p>
                     Questa parte è una piccola descrizione lato server ? Questa parte è una piccola descrizione lato server ? Questa parte è una piccola descrizione lato server ? Questa parte è una piccola descrizione lato server ?
             	</p>
-                <a href="/Studify/schedalibro.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Vedi</a>
+                <a href="/Studify/schedalibro.php" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Vedi</a>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>

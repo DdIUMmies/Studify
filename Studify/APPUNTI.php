@@ -25,49 +25,47 @@
   
   <!-- Navigation -->
   <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
-    <nav class="navbar navbar-light bg-light">
-      <div class="container">
-      <a class="navbar-brand" href="index.php">
-        <img src="img/logo_small.png" height="50" alt="" loading="lazy" />
-      </a>
-      </div>
-    </nav>
-  
-    <div class="collapse navbar-collapse" id="collapseResponsive"></div>
-    <ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
-      <li class="nav-item ">
-        <a class="nav-link" href="index.php">Home</a></li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="/Studify/profile.htmlhb" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">Il mio account</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-          <a class="dropdown-item" href="profile.php?name=$nome&surname=$cognome&emailadd=$email">I tuoi appunti </a>
-          <div class="dropdown-divider"></div>
-          
-      <li class="nav-item ">
-        <a class="nav-link active" aria-current="page" href="APPUNTI.html">Appunti</a></li>
-      <li class="nav-item ">
-        <a class="nav-link" href="#">Lavora con noi</a></li>
-      <li class="nav-item">
-      <?php
-				if(isset($_SESSION['id'])) {
-					
-					?>
-					<a class="nav-link" href="profile.php"> <?php echo($_SESSION['username']) ?> </a>
-					<li class="nav-item active">
-              			<form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
-				<?php
-				}
-				else {
-					?>
-					<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
-					<li class="nav-item active">
-					<a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
+	<nav class="navbar navbar-light bg-light">
+	  <div class="container">
+		<a class="navbar-brand" href="index.php">
+		  <img src="img/logo_small.png" height="50" alt="" loading="lazy"/>
+		</a>
+	  </div>
+	</nav>
+
+	<div class="collapse navbar-collapse" id="collapseResponsive"></div>
+	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
+		<li class="nav-item ">
+			<a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+				
+		<li class="nav-item ">
+			<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
+		<li class="nav-item ">
+			<a class="nav-link" href="#">Lavora con noi</a></li>
+			<?php
+					if(isset($_SESSION['id'])) {
+						
+						?>
+					    <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false"> <?php echo($_SESSION['username']) ?> </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+							<a class="dropdown-item" href="profile.php"> Il tuo profilo </a>
+						</li>
+						<li class="nav-item active">
+							  <form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
 					<?php
-				}
-				?>	
-    </ul>
-  </nav>
+					}
+					else {
+						?>
+						<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
+						<li class="nav-item active">
+						<a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
+						<?php
+					}
+					?>	
+	</ul>
+</nav>
   <br>
   <div class="jumbotron-fluid">
     <div class="text-center" data-aos="zoom-in-out">
@@ -91,7 +89,7 @@
                 Qui potrai trovare tutti gli appunti riguardanti la facoltà di Informatica. Gli appunti 
                 possono variare in base al programma e al professore quindi attento!
               </p>
-              <a class="btn btn-primary" style="background-color: navy;" href="/Studify/informatica.html">Vai agli appunti</a>
+              <a class="btn btn-primary" style="background-color: navy;" href="/Studify/informatica.php">Vai agli appunti</a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Ultimo aggiornamento 4 min fa</small>
