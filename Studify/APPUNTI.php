@@ -27,7 +27,7 @@
   <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
     <nav class="navbar navbar-light bg-light">
       <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="img/logo_small.png" height="50" alt="" loading="lazy" />
       </a>
       </div>

@@ -27,7 +27,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
 	<nav class="navbar navbar-light bg-light">
 	  <div class="container">
-		<a class="navbar-brand" href="index.html">
+		<a class="navbar-brand" href="index.php">
 		  <img src="img/logo_small.png" height="50" alt="" loading="lazy"/>
 		</a>
 	  </div>
@@ -38,10 +38,10 @@
 		<li class="nav-item ">
 			<a class="nav-link" aria-current="page" href="index.php">Home</a></li>
 		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle active" href="/Studify/profile.htmlhb" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+			<a class="nav-link dropdown-toggle active" href="/Studify/profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
 				 aria-haspopup="true" aria-expanded="false">Il mio account</a>
 			<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-				<a class="dropdown-item" href="profile.php?name=$nome&surname=$cognome&emailadd=$email">I tuoi appunti </a>
+				<a class="dropdown-item" href="profile.php">I tuoi appunti </a>
 				<div class="dropdown-divider"></div>
 				
 		<li class="nav-item ">

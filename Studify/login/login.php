@@ -50,7 +50,7 @@
                     $_SESSION['corso']=$corso;
                     $_SESSION['username']=$username;
 
-                    header("Location: ../profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita");
+                    header("Location: ../profile.php?");
                 
                 }
             }
