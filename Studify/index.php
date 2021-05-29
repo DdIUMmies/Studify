@@ -31,7 +31,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
 	<nav class="navbar navbar-light bg-light">
 	  <div class="container">
-		<a class="navbar-brand" href="index.html">
+		<a class="navbar-brand" href="index.php">
 		  <img src="img/logo_small.png" height="50" alt="" loading="lazy"/>
 		</a>
 	  </div>
@@ -55,7 +55,10 @@
 			<?php
 				if(isset($_SESSION['id'])) {
 					?>
-					<a class="nav-link" href="profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita"> Il tuo Account </a>
+					<a class="nav-link" href="profile.php?name=$nome&surname=$cognome&emailadd=$email&user=$username&cor=$corso&uni=$universita">
+						<?php $username=$_SESSION['username'];
+						echo "$username";?>
+					</a>
 					<li class="nav-item active">
               			<form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
 				<?php
