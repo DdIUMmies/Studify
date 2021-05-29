@@ -1,6 +1,5 @@
 <?php
-	session_start();
-            
+	session_start();          
 ?>
 
 <!DOCTYPE html>
@@ -95,8 +94,8 @@
 							<li class="primo">
 									Informatica
 										<ul class="sub-menu">
-											<li class="dropdown-item" href="informatica.html">
-											<a  href="informatica.html" >Appunti Informatica </a>
+											<li class="dropdown-item" href="informatica.php">
+											<a  href="informatica.php" >Appunti Informatica </a>
 												<ul class="sub-menu">
 													<li class="dropdown-item" href="#"> Ingegneria del Software </li>
 													<li class="dropdown-item" href="#"> Basi di Dati II </li>
