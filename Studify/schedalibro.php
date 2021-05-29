@@ -1,3 +1,12 @@
+<?php $dbconn= pg_connect("host=localhost port=5432
+    dbname=StudifyDB
+    user=postgres password=password")
+    or die('Impossibile connettersi: '.pg_last_error());?>
+<?php
+  session_start();
+
+  if(isset($_SESSION['id'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,43 +28,70 @@
  <nav class="navbar navbar-expand-md navbar-light bg-light sticky top">
 	<nav class="navbar navbar-light bg-light">
 	  <div class="container">
-	  <a class="navbar-brand" href="index.php">
-		<img src="img/logo_small.png" height="50" alt="" loading="lazy" />
-	  </a>
+		<a class="navbar-brand" href="index.php">
+		  <img src="img/logo_small.png" height="50" alt="" loading="lazy"/>
+		</a>
 	  </div>
 	</nav>
-  
+
 	<div class="collapse navbar-collapse" id="collapseResponsive"></div>
 	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
-	  <li class="nav-item ">
-		<a class="nav-link" href="index.php">Home</a></li>
-	  <li class="nav-item dropdown">
-		<a class="nav-link dropdown-toggle" href="profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
-		   aria-haspopup="true" aria-expanded="false">Il mio account</a>
-		<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-		  <a class="dropdown-item" href="profile.php?name=$nome&surname=$cognome&emailadd=$email">I tuoi appunti </a>
-		  <div class="dropdown-divider"></div>
-		  
-	  <li class="nav-item ">
-		<a class="nav-link active" aria-current="page" href="APPUNTI.html">Appunti</a></li>
-	  <li class="nav-item ">
-		<a class="nav-link" href="#">Lavora con noi</a></li>
-	  <li class="nav-item">
-		<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
-	  <li class="nav-item active">
-		<a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
+		<li class="nav-item ">
+			<a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+				
+		<li class="nav-item ">
+			<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
+		<li class="nav-item ">
+			<a class="nav-link" href="#">Lavora con noi</a></li>
+			<?php
+					if(isset($_SESSION['id'])) {
+						
+						?>
+					    <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false"> <?php echo($_SESSION['username']) ?> </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
+							<a class="dropdown-item" href="profile.php"> Il tuo profilo </a>
+						</li>
+						<li class="nav-item active">
+							  <form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
+					<?php
+					}
+					else {
+						?>
+						<a class="nav-link" href="registrazione/index.html" > Registrati </a></li>
+						<li class="nav-item active">
+						<a class="btn btn-primary" style="background-color: navy;" href="login/index.php">Accedi</a></li>
+						<?php
+					}
+					?>	
 	</ul>
-  </nav>
+</nav>
 
 <br>
-        <title>Title of the document</title>
         <br>
         <div class="container">
+		<?php 
+			$query_file="SELECT documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+			$result0=pg_query($dbconn,$query_file);
+			$file=pg_fetch_array($result0,0,PGSQL_NUM);
+		?>
         <a href="/Studify/profile.php"><button type="button-" class="btn btn-light"> ◀ Torna Indietro </button></a>
         <br>
         <br>
-        <h1>Bitcoin and Criptocurrency</h1>
-        <p class="card-text"><small class="text-muted">Inserito da "Alessandro"</small></p>
+        <h1>
+		<?php $query_titolo="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result=pg_query($dbconn,$query_titolo);
+                    $titolo=pg_fetch_array($result,0,PGSQL_NUM);
+                    echo $titolo[0];
+		?>
+		</h1>
+        <p class="card-text"><small class="text-muted">Inserito da 
+			<?php	$query_utente="SELECT utente FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result1=pg_query($dbconn,$query_utente);
+                    $utente=pg_fetch_array($result1,0,PGSQL_NUM);
+                    echo $utente[0];
+			?></small></p>
         </div>
         <br>
         <br>
@@ -63,7 +99,7 @@
     
 
 <div class="container">
-    <embed src="img/bitcoin_it (1).pdf#toolbar=0" type="application/pdf" width="100%" height="600px"/>
+    <embed src=echo $file[0]" type="application/pdf" width="100%" height="600px"/>
     </div>"
     
 <div class="container">
@@ -73,15 +109,18 @@
 
   <h3>Descrizione</h3>
   <!---da inserire lato server-->
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server.
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server.
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  <p class="card-text"><small class="text-muted">Ultima modifica: Oggi</small></p>
+  <?php $query_descr="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result2=pg_query($dbconn,$query_descr);
+                    $descr=pg_fetch_array($result2,0,PGSQL_NUM);
+                    echo $descr[0];
+  ?>
+  <p class="card-text"><small class="text-muted">
+  <?php $query_categoria="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result3=pg_query($dbconn,$query_categoria);
+                    $categoria=pg_fetch_array($result3,0,PGSQL_NUM);
+                    echo $categoria[0];
+  ?>
+  </small></p>
 </div>
 <br>
 <br>
@@ -186,6 +225,17 @@
 $().button('dispose')
 </script>
 
+<?php
+
+} else {
+    header("Location: noAccess.html");
+    ?>
+    <form action="login/index.php" method="post">
+    <input type="submit" value="Login"/>
+    </form>
+    <?php
+}
+?>
 
 
  
