@@ -49,6 +49,8 @@
                     $_SESSION['universita']=$universita;
                     $_SESSION['corso']=$corso;
                     $_SESSION['username']=$username;
+                    
+                    
 
                     header("Location: ../profile.php?");
                 

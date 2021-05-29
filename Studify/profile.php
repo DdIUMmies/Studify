@@ -3,7 +3,11 @@
 
   if(isset($_SESSION['id'])) {
     ?>
-    <!DOCTYPE html >
+<?php $dbconn= pg_connect("host=localhost port=5432
+    dbname=StudifyDB
+    user=postgres password=password")
+    or die('Impossibile connettersi: '.pg_last_error());?>
+<!DOCTYPE html >
 <head>
   <head>
     <meta charset="utf-8">
@@ -17,6 +21,7 @@
     <link href="profile.css" rel="stylesheet">
     <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Studify/all.css">
     <script src="https://kit.fontawesome.com/797356307c.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
@@ -221,13 +226,24 @@
                 <img class="card-img-top" src="/Studify/img/basididati.jpg"  alt="Basi di Dati ">
               
                 <div class="card-body">
-                  <h5 >Libro Basi di Dati</h5>
-                  <p class="card-text">Libro di Basi di dati del corso di informatica presso la sapienza.</p>
+                  <h5 ><?php $query_titolo="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result1=pg_query($dbconn,$query_titolo);
+                    $titolo=pg_fetch_array($result1,null,PGSQL_NUM);
+                    echo $titolo[0];?></p></h5>
+                  <p class="card-text">
+                  <?php $query_descr="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result=pg_query($dbconn,$query_descr);
+                    $descr=pg_fetch_array($result,null,PGSQL_NUM);
+                    echo $descr[0];?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary" >Visualizza</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Modifica</button>
-                      <button class="btn btn-outline-primary"><i class="fa fa-heart" aria-hidden="true"></i>
+                      <div>
+                      <i class="fa fa-heart"></i>
+                      </div>
+                                          
+
                     </div>
                     <small class="text-muted">ora</small>
                   </div>
@@ -399,4 +415,15 @@
 }
 ?>
 
+<!----JAVASCRIPT & JQUERY-->
 
+<script>
+
+$(".star.glyphicon").click(function() {
+  $(this).toggleClass("glyphicon-star glyphicon-star-empty");
+});
+
+$(".heart.fa").click(function() {
+  $(this).toggleClass("fa-heart fa-heart-o");
+});
+</script>
