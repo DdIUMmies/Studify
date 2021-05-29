@@ -223,18 +223,20 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="/Studify/img/basididati.jpg"  alt="Basi di Dati ">
+                <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg"  alt="Basi di Dati ">
               
                 <div class="card-body">
-                  <h5 ><?php $query_titolo="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
-                    $result1=pg_query($dbconn,$query_titolo);
-                    $titolo=pg_fetch_array($result1,null,PGSQL_NUM);
-                    echo $titolo[0];?></p></h5>
+                  <h5 ><?php $query_titolo_1="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result=pg_query($dbconn,$query_titolo_1);
+                    $titolo_1=pg_fetch_array($result,0,PGSQL_NUM);
+                    echo $titolo_1[0];?></p></h5>
+
                   <p class="card-text">
-                  <?php $query_descr="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
-                    $result=pg_query($dbconn,$query_descr);
-                    $descr=pg_fetch_array($result,null,PGSQL_NUM);
-                    echo $descr[0];?></p>
+                  <?php $query_descr_1="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result1=pg_query($dbconn,$query_descr_1);
+                    $descr_1=pg_fetch_array($result1,0,PGSQL_NUM);
+                    echo $descr_1[0];?></p>
+
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary" >Visualizza</button>
@@ -245,18 +247,32 @@
                                           
 
                     </div>
-                    <small class="text-muted">ora</small>
+                    <small class="text-muted">
+                    <?php $query_categoria_1="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result2=pg_query($dbconn,$query_categoria_1);
+                    $categoria_1=pg_fetch_array($result2,0,PGSQL_NUM);
+                    echo $categoria_1[0];?></small>
                   </div>
                
               </div>
             </div>
             </div>
+
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="/Studify/img/ingegneria.jpg" alt="Ingegneria del software">
+                <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg" alt="Ingegneria del software">
                 <div class="card-body">
-                  <h5>Agile Process</h5>
-                  <p class="card-text">Appunti di ingegneria del software "Agile Process".</p>
+                  <h5><?php $query_titolo_2="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result3=pg_query($dbconn,$query_titolo_2);
+                    $titolo_2=pg_fetch_array($result3,1,PGSQL_NUM);
+                    echo $titolo_2[0];?></h5>
+
+                  <p class="card-text">
+                  <?php $query_descr_2="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result4=pg_query($dbconn,$query_descr_2);
+                    $descr_2=pg_fetch_array($result4,1,PGSQL_NUM);
+                    echo $descr_2[0];?>
+                  </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                      
@@ -265,33 +281,53 @@
                       <button><i onclick="myFunction(this)" class="fa fa-thumbs-up" style="color: blue; background-color: white;"></i></button>
                       
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    <small class="text-muted">
+                    <?php $query_categoria_2="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result5=pg_query($dbconn,$query_categoria_2);
+                    $categoria_2=pg_fetch_array($result5,1,PGSQL_NUM);
+                    echo $categoria_2[0];?>
+                    </small>
+
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="/Studify/img/shitcoin.jpg" alt="Finanza e Marketing ">
+                <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg" alt="Ingegneria del software">
                 <div class="card-body">
-                  <h5>Bitcoin & Criptocurrency</h5>
-                  <p class="card-text">Appunti trovati online su bitcoin etherium e shitcoin varie.</p>
+                  <h5><?php $query_titolo_3="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result6=pg_query($dbconn,$query_titolo_3);
+                    $titolo_3=pg_fetch_array($result6,2,PGSQL_NUM);
+                    echo $titolo_3[0];?></h5>
+
+                  <p class="card-text">
+                  <?php $query_descr_3="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result7=pg_query($dbconn,$query_descr_3);
+                    $descr_3=pg_fetch_array($result7,2,PGSQL_NUM);
+                    echo $descr_3[0];?>
+                  </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <div class="container">
-                      <i id="btn" class="far fa fa-heart"></i>
-                    </div>
                      
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Visualizza</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Modifica</button>
+                      <button><i onclick="myFunction(this)" class="fa fa-thumbs-up" style="color: blue; background-color: white;"></i></button>
                       
                     </div>
-                    <small class="text-muted">9 mins</small>
+                    <small class="text-muted">
+                    <?php $query_categoria_3="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result8=pg_query($dbconn,$query_categoria_3);
+                    $categoria_3=pg_fetch_array($result8,2,PGSQL_NUM);
+                    echo $categoria_3[0];?>
+                    </small>
+
                   </div>
                 </div>
               </div>
             </div>
+
         </div>
         <div class="container">
         
