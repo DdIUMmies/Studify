@@ -46,7 +46,7 @@
 		<a class="nav-link dropdown-toggle" href="/Studify/profile.html" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
 		   aria-haspopup="true" aria-expanded="false">Il mio account</a>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-		  <a class="dropdown-item" href="profile.php?name=$nome&surname=$cognome&emailadd=$email">I tuoi appunti </a>
+		  <a class="dropdown-item" href="profile.php">I tuoi appunti </a>
 		  <div class="dropdown-divider"></div>
 		  
 	  <li class="nav-item ">
