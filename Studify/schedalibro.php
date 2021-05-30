@@ -71,11 +71,6 @@
 <br>
         <br>
         <div class="container">
-		<?php 
-			$query_file="SELECT documento FROM appunti app, utenti u WHERE  app.utente=u.username";
-			$result0=pg_query($dbconn,$query_file);
-			$file=pg_fetch_array($result0,0,PGSQL_NUM);
-		?>
         <a href="/Studify/profile.php"><button type="button-" class="btn btn-light"> ◀ Torna Indietro </button></a>
         <br>
         <br>
@@ -99,12 +94,20 @@
     
 
 <div class="container">
-    <embed src=echo $file[0]" type="application/pdf" width="100%" height="600px"/>
+    <!-- <embed src=echo "$file[0]" type="application/pdf" width="100%" height="600px"/> -->
+	<?php 
+			$query_file="SELECT * FROM appunti app WHERE  app.materia='Interazione Uomo-Macchina'";
+			$result0=pg_query($dbconn,$query_file);
+			$riga=pg_fetch_array($result0);
+			$nome_file=$riga['nome_file'];
+			echo "<a href=\"$nome_file\">Scarica file</a>";
+	?>
+	
     </div>"
     
 <div class="container">
     
-  <p><a href="/Studify/img/bitcoin_it (1).pdf">Scarica doucumento</a>.</p>
+  <p><a href=/"$file[0]/">Scarica doucumento</a>.</p>
 
 
   <h3>Descrizione</h3>
