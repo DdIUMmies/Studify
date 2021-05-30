@@ -3,7 +3,7 @@
 
   if(isset($_SESSION['id'])) {
     ?>
-<?php $dbconn= pg_connect("host=localhost port=5432
+    <?php $dbconn= pg_connect("host=localhost port=5432
     dbname=StudifyDB
     user=postgres password=password")
     or die('Impossibile connettersi: '.pg_last_error());?>
@@ -249,6 +249,18 @@
         </div>
       </div>
 
+      <?php
+          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
+          $ris=pg_query($dbconn, $query_check);
+          $num=pg_num_rows($ris);
+
+          if ($num==0 || $num==-1) {
+            echo ("Non hai ancora caricato nulla!");
+          }
+
+          else {
+                ?>
+
       <div class="album py-5 bg-light">
         <div class="container">
 
@@ -256,8 +268,6 @@
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg"  alt="Basi di Dati ">
-
-
 
                 <div class="card-body">
                   <h5 ><?php $query_titolo_1="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
@@ -284,6 +294,7 @@
                       </button>
                     <div>
                   </div>
+              
 
                     </div>
                     <small class="text-muted">
@@ -296,8 +307,19 @@
               </div>
             </div>
             </div>
-
+            
             <div class="col-md-4">
+            <?php
+          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
+          $ris=pg_query($dbconn, $query_check);
+          $num=pg_num_rows($ris);
+
+          if ($num<=1) {
+            echo ("Carica subito altri documenti!");
+          }
+
+          else {
+                ?>
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg" alt="Ingegneria del software">
                 <div class="card-body">
@@ -339,6 +361,17 @@
             </div>
 
             <div class="col-md-4">
+            <?php
+          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
+          $ris=pg_query($dbconn, $query_check);
+          $num=pg_num_rows($ris);
+
+          if ($num<=2) {
+            echo ("");
+          }
+
+          else {
+                ?>
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg" alt="Ingegneria del software">
                 <div class="card-body">
@@ -379,7 +412,13 @@
               </div>
             </div>
 
+            <?php
+          }}}
+    ?>
         </div>
+
+     
+
         <div class="container">
         
    
@@ -391,6 +430,8 @@
       </div>             
         <br>   
     </main>
+
+
 
 <!---                                   Footer                                     -->
 <footer class="bg-light text-center text-black" style="background-color: antiquewhite;">
