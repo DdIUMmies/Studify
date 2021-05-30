@@ -67,15 +67,20 @@
 	</ul>
 </nav>
   <br>
-  <div class="jumbotron-fluid">
-    <div class="text-center" data-aos="zoom-in-out">
-  <h3> Sezione Appunti</h3>
+  <div class="container">
+<div class="jumbotron-fluid" style="background-color: whitesmoke;" data-aos="slide-left">
+<div class="text-center">
+    <br>
+<h3>Appunti</h3>
+<br>
+</div>
 </div>
 </div>
   <br>
 
     <!-- CARDS -->
     <br>
+	<div class="container">
       <div class="row">
         <div class="col-4" data-aos="flip-left" >
           <div class="card h-100"  >
@@ -135,6 +140,14 @@
           </div>
         </div>
       </div>
+	</div>
+  </body>
+
+
+	</div>
+
+<br>
+<br>
     <!-- Card:INFORMATICA -->
 
     <!-- Card:PSICOLOGIA -->
