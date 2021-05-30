@@ -256,7 +256,9 @@
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg"  alt="Basi di Dati ">
-              
+
+
+
                 <div class="card-body">
                   <h5 ><?php $query_titolo_1="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
                     $result=pg_query($dbconn,$query_titolo_1);
