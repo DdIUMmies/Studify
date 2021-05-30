@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="/Studify/all.css">
     <script src="https://kit.fontawesome.com/797356307c.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script> src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"</script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   </head>
   <body>
@@ -71,10 +74,12 @@
 					?>	
 	</ul>
 </nav>
-
+<br>
+<div data-aos="fade-right" class="container ">
+<div class="jumbotron-fluid" style="background-image:url(/Studify/img/school.jpg)">
     <br>
-    <div class="container">
-    <div class="jumbotron " style="background-image: url(/Studify/img/sfondo.png);">
+    <br>
+    
     
       <div class="text-center">
           <h2>Buongiorno 
@@ -83,16 +88,28 @@
             echo "$username";
             ?> 
             &#128104;&#8205;&#127891; </h2></div>
+            <br>
+    <br>
       </div>
 
     </div>
+    </div>
+
+    <br>
+
+      <br>
+      <div class="row">
+        
+      </div>
+      
+ 
 
 
 
     <div class="container">
       <div class="main-body">
         <div class="text-center">
-          <a href="modificaProfilo.html"> Modifica informazioni personali</a>
+
         </div>
      
             <!-- /Breadcrumb -->
@@ -118,9 +135,12 @@
                           echo "$universita";
                         ?> </p>
                         
-                        <button class="btn btn-outline-primary"><i class="fa fa-star" aria-hidden="true"></i></button>
-                        <div class="btn btn-outline-primary">Message</button>
-                      </div>
+                        
+                      <br>
+                      <br>
+                      <a href="/Studify/modificaProfilo.html"><button type="button" class="btn btn-light" style="background-color:whitesmoke">Modifica Informazioni personali </button></a>
+                      
+
                       </div>
                     </div>
                   </div>
@@ -240,14 +260,26 @@
 
  
       </div>
+      <div class="container">
 
       <div class=" text-center">
-        <div class="container">
-          <div class="jumbotron" style="background-image: url(/Studify/img/sfondo.png);">
-        <h2> Documenti e Appunti caricati &#128218</h2>
-        </div>
-        </div>
+      <div data-aos="fade-right" class="container ">
+<div class="jumbotron-fluid" style="background-image:url(/Studify/img/school.jpg)">
+    <br>
+    <br>
+    
+    
+      <div class="text-center">
+        <h3>I tuoi documenti</h3>
+            <br>
+    <br>
       </div>
+
+    </div>
+    </div>
+    <br>
+    <br>
+
 
       <?php
           $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
@@ -422,15 +454,22 @@
         <div class="container">
         
    
-        <a class="btn btn-light btn-block"  style="border-color:lightblue;" href="/Studify/formappunti.php" role="button">Carica Documento</a>
+        <a class="btn btn-light btn-block"  style="border-color:lightgrey;" href="/Studify/formappunti.php" role="button">Carica Documento</a>
 
         <br>
         </div>
         </div>
       </div>             
         <br>   
-    </main>
 
+    </div>
+        </div>
+  </body>
+</head>
+</div>
+
+<br>
+<br>
 
 
 <!---                                   Footer                                     -->
@@ -555,3 +594,15 @@ $(".heart.fa").click(function() {
   $(this).toggleClass("fa-heart fa-heart-o");
 });
 </script>
+
+
+
+
+<script>
+	 AOS.init({
+		duration:1000,
+		offset:120,
+		easing: 'ease-in-out'
+
+	});
+	</script>
