@@ -36,10 +36,10 @@
 	<div class="collapse navbar-collapse" id="collapseResponsive"></div>
 	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
 		<li class="nav-item ">
-			<a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+			<a class="nav-link" href="index.php">Home</a></li>
 				
 		<li class="nav-item ">
-			<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
+			<a class="nav-link active" aria-current="page" href="APPUNTI.php">Appunti</a></li>
 		<li class="nav-item ">
 			<a class="nav-link" href="chiSiamo.html">Chi Siamo</a></li>
 			<?php

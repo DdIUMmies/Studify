@@ -142,7 +142,7 @@
         <option value="L-07 Classe delle Lauree in Ingegneria Civile e Ambientale">
            L-07 Classe delle Lauree in Ingegneria Civile e Ambientale
         </option>
-        <option value="L-08 Classe delle Lauree in Ingegneria dell'Informazione">
+        <option value="L-08 Classe delle Lauree in Ingegneria dell Informazione">
            L-08 Classe delle Lauree in Ingegneria dell'Informazione
         </option>
         <option value="L-09 Classe delle Lauree in Ingegneria Industriale">
@@ -166,16 +166,16 @@
         <option value="L-15 Classe delle Lauree in Scienze del Turismo">
            L-15 Classe delle Lauree in Scienze del Turismo
         </option>
-        <option value="L-16 Classe delle Lauree in Scienze dell'Amministrazione e dell'Organizzazione">
+        <option value="L-16 Classe delle Lauree in Scienze dell Amministrazione e dell Organizzazione">
            L-16 Classe delle Lauree in Scienze dell'Amministrazione e dell'Organizzazione
         </option>
-        <option value="L-17 Classe delle Lauree in Scienze dell'Architettura">
+        <option value="L-17 Classe delle Lauree in Scienze dell Architettura">
            L-17 Classe delle Lauree in Scienze dell'Architettura
         </option>
-        <option value="L-18 Classe delle Lauree in Scienze dell'Economia e della Gestione Aziendale">
+        <option value="L-18 Classe delle Lauree in Scienze dell Economia e della Gestione Aziendale">
            L-18 Classe delle Lauree in Scienze dell'Economia e della Gestione Aziendale
         </option>
-        <option value="L-19 Classe delle Lauree in Scienze dell'Educazione e della Formazione">
+        <option value="L-19 Classe delle Lauree in Scienze dell Educazione e della Formazione">
            L-19 Classe delle Lauree in Scienze dell'Educazione e della Formazione
         </option>
         <option value="L-20 Classe delle Lauree in Scienze della Comunicazione">
@@ -187,7 +187,7 @@
         <option value="L-22 Classe delle Lauree in Scienze delle Attività Motorie e Sportive">
            L-22 Classe delle Lauree in Scienze delle Attività Motorie e Sportive
         </option>
-        <option value="L-23 Classe delle Lauree in Scienze e Tecniche dell'Edilizia">
+        <option value="L-23 Classe delle Lauree in Scienze e Tecniche dell Edilizia">
            L-23 Classe delle Lauree in Scienze e Tecniche dell'Edilizia
         </option>
         <option value="L-24 Classe delle Lauree in Scienze e Tecniche Psicologiche">
@@ -214,7 +214,7 @@
         <option value="L-31 Classe delle Lauree in Scienze e Tecnologie Informatiche">
            L-31 Classe delle Lauree in Scienze e Tecnologie Informatiche
         </option>
-        <option value="L-32 Classe delle Lauree in Scienze e Tecnologie per l'Ambiente e la Natura">
+        <option value="L-32 Classe delle Lauree in Scienze e Tecnologie per l Ambiente e la Natura">
            L-32 Classe delle Lauree in Scienze e Tecnologie per l'Ambiente e la Natura
         </option>
         <option value="L-33 Classe delle Lauree in Scienze Economiche e Statistiche">
@@ -241,7 +241,7 @@
         <option value="L-40 Classe delle Lauree in Sociologia">
            L-40 Classe delle Lauree in Sociologia
         </option>
-        <option value="L-41 Classe delle Lauree in Statistic">
+        <option value="L-41 Classe delle Lauree in Statistica">
            L-41 Classe delle Lauree in Statistica
         </option>
         <option value="L-42 Classe delle Lauree in Storia">
@@ -346,7 +346,7 @@
         <option value="LM-24 Ingegneria dei sistemi edilizi">
            LM-24 Ingegneria dei sistemi edilizi
         </option>
-        <option value="LM-25 Ingegneria dell'automazione">
+        <option value="LM-25 Ingegneria dell automazione">
            LM-25 Ingegneria dell'automazione
         </option>
         <option value="LM-26 Ingegneria della sicurezza">
@@ -376,10 +376,10 @@
         <option value="LM-34 Ingegneria navale">
            LM-34 Ingegneria navale
         </option>
-        <option value="LM-35 Ingegneria per l'ambiente e il territorio">
+        <option value="LM-35 Ingegneria per l ambiente e il territorio">
            LM-35 Ingegneria per l'ambiente e il territorio
         </option>
-        <option value="LM-36 Lingue e letterature dell'Africa e dell'Asia">
+        <option value="LM-36 Lingue e letterature dell Africa e dell Asia">
            LM-36 Lingue e letterature dell'Africa e dell'Asia
         </option>
         <option value="LM-37 Lingue e letterature moderne europee e americane">
@@ -403,7 +403,7 @@
         <option value="LM-43 Metodologie informatiche per le discipline umanistiche">
            LM-43 Metodologie informatiche per le discipline umanistiche
         </option>
-        <option value="LM-44 Modellistica matematico-fisica per l'ingegneria">
+        <option value="LM-44 Modellistica matematico-fisica per l ingegneria">
            LM-44 Modellistica matematico-fisica per l'ingegneria
         </option>
         <option value="LM-45 Musicologia e beni musicali">
@@ -439,16 +439,16 @@
         <option value="LM-55 Scienze cognitive">
            LM-55 Scienze cognitive
         </option>
-        <option value="LM-56 Scienze dell'economia">
+        <option value="LM-56 Scienze dell economia">
            LM-56 Scienze dell'economia
         </option>
-        <option value="LM-57 Scienze dell'educazione degli adulti e della formazione continua">
+        <option value="LM-57 Scienze dell educazione degli adulti e della formazione continua">
            LM-57 Scienze dell'educazione degli adulti e della formazione continua
         </option>
-        <option value="LM-58 Scienze dell'universo">
+        <option value="LM-58 Scienze dell universo">
            LM-58 Scienze dell'universo
         </option>
-        <option value="LM-59 Scienze della comunicazione pubblica, d'impresa e pubblicità">
+        <option value="LM-59 Scienze della comunicazione pubblica, d impresa e pubblicità">
            LM-59 Scienze della comunicazione pubblica, d'impresa e pubblicità
         </option>
         <option value="LM-60 Scienze della natura">
@@ -496,10 +496,10 @@
         <option value="LM-74 Scienze e tecnologie geologiche">
            LM-74 Scienze e tecnologie geologiche
         </option>
-        <option value="LM-75 Scienze e tecnologie per l'ambiente e il territorio">
+        <option value="LM-75 Scienze e tecnologie per l ambiente e il territorio">
            LM-75 Scienze e tecnologie per l'ambiente e il territorio
         </option>
-        <option value="LM-76 Scienze economiche per l'ambiente e la cultura">
+        <option value="LM-76 Scienze economiche per l ambiente e la cultura">
            LM-76 Scienze economiche per l'ambiente e la cultura
         </option>
         <option value="LM-77 Scienze economico-aziendali">
@@ -538,19 +538,19 @@
         <option value="LM-88 Sociologia e ricerca sociale">
            LM-88 Sociologia e ricerca sociale
         </option>
-        <option value="LM-89 Storia dell'arte">
+        <option value="LM-89 Storia dell arte">
            LM-89 Storia dell'arte
         </option>
         <option value="LM-90 Studi europei">
            LM-90 Studi europei
         </option>
-        <option value="LM-91 Tecniche e metodi per la società dell'informazione">
+        <option value="LM-91 Tecniche e metodi per la società dell informazione">
            LM-91 Tecniche e metodi per la società dell'informazione
         </option>
         <option value="LM-92 Teorie della comunicazione">
            LM-92 Teorie della comunicazione
         </option>
-        <option value="LM-93 Teorie e metodologie dell'E-Learning e della media education">
+        <option value="LM-93 Teorie e metodologie dell E-Learning e della media education">
            LM-93 Teorie e metodologie dell'E-Learning e della media education
         </option>
         <option value="LM-94 Traduzione specialistica e interpretariato">

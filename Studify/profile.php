@@ -44,7 +44,7 @@
 	<div class="collapse navbar-collapse" id="collapseResponsive"></div>
 	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
 		<li class="nav-item ">
-			<a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+			<a class="nav-link" href="index.php">Home</a></li>
 				
 		<li class="nav-item ">
 			<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
@@ -55,10 +55,10 @@
 						
 						?>
 					    <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+							<a class="nav-link active dropdown-toggle" href="profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false"> <?php echo($_SESSION['username']) ?> </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-							<a class="dropdown-item" href="profile.php"> Il tuo profilo </a>
+							<a class="dropdown-item " href="profile.php"> Il tuo profilo </a>
 						</li>
 						<li class="nav-item active">
 							  <form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
@@ -96,7 +96,7 @@
     </div>
 
     <br>
-    <div class="container">
+
       <br>
       <div class="row">
         
@@ -135,10 +135,7 @@
                           echo "$universita";
                         ?> </p>
                         
-                        <button class="btn btn-outline-primary"><i class="fa fa-star" aria-hidden="true"></i></button>
-                        <div class="btn btn-outline-primary">Message</button>
                         
-                      </div>
                       <br>
                       <br>
                       <a href="/Studify/modificaProfilo.html"><button type="button" class="btn btn-light" style="background-color:whitesmoke">Modifica Informazioni personali </button></a>
@@ -263,15 +260,26 @@
 
  
       </div>
+      <div class="container">
 
       <div class=" text-center">
-        <br>
-        <br>
-        
-         
-        <h2 data-aos="fade-left"> Documenti e Appunti caricati &#128218</h2>
-      
+      <div data-aos="fade-right" class="container ">
+<div class="jumbotron-fluid" style="background-image:url(/Studify/img/school.jpg)">
+    <br>
+    <br>
+    
+    
+      <div class="text-center">
+        <h3>I tuoi documenti</h3>
+            <br>
+    <br>
       </div>
+
+    </div>
+    </div>
+    <br>
+    <br>
+
 
       <?php
           $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
@@ -446,15 +454,22 @@
         <div class="container">
         
    
-        <a class="btn btn-light btn-block"  style="border-color:lightblue;" href="/Studify/formappunti.php" role="button">Carica Documento</a>
+        <a class="btn btn-light btn-block"  style="border-color:lightgrey;" href="/Studify/formappunti.php" role="button">Carica Documento</a>
 
         <br>
         </div>
         </div>
       </div>             
         <br>   
-    </main>
 
+    </div>
+        </div>
+  </body>
+</head>
+</div>
+
+<br>
+<br>
 
 
 <!---                                   Footer                                     -->
