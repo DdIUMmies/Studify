@@ -156,7 +156,7 @@
 				</em></p>
 				<a href="/Studify/APPUNTI.php" style="background-color:lightgray;" class="btn btn-light">Vai agli appunti</a>
 
-			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			
 		  </div>
 		</div>
 		<div class="card" data-aos="flip-left">
@@ -167,7 +167,7 @@
 		Cosa aspetti, entra subito!</em>  </p>
 		<br>
 		<a href="videoinfo.html" class="btn btn-light" style="background-color:lightgrey" >Videolezioni</a>
-			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			
 		  </div>
 		</div>
 		<div class="card"data-aos="flip-left"  >
@@ -183,7 +183,7 @@
 			
 			<a href="https://discord.gg/hrwyUy7G9v" class="btn btn-light" style="background-color:lightgray;">Vai al Server</a>
 
-			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			
 		  </div>
 		</div>
 	  </div>
@@ -220,10 +220,9 @@
           <div class="col-md-7 order-md-2">
 				
             <h2 data-aos="slide-left" class="featurette-heading">Studiare non è mai stato cosi social!</h2>
-            <p  data-aos="slide-left" class="lead">La nostra community vanta un gran numero di studenti attivi in tutta italia.
-				Abbiamo studenti da ogni parte di italia di qualsiasi facoltà.
+            <p  data-aos="slide-left" class="lead">La nostra community vanta un gran numero di studenti attivi in tutta Italia, di qualsiasi facoltà.
 				Puoi fare amicizia con loro oppure crearti un gruppo di studio indipendente.
-				Inoltre disponiamo di stanze Discord di ogni materia nelle quali potrai confrontarti con colleghi provenienti da ogni parte di italia.
+				Inoltre disponiamo di stanze Discord di ogni materia nelle quali potrai confrontarti con colleghi provenienti da ogni parte di Italia.
 			
 			</p>
 			<a  data-aos="zoom-in-up" href="https://discord.gg/hrwyUy7G9v" class="btn btn-light" style="background-color:lightgrey" >Entra</a> 
