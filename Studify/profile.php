@@ -96,7 +96,7 @@
     </div>
 
     <br>
-    <div class="container">
+
       <br>
       <div class="row">
         
@@ -135,10 +135,7 @@
                           echo "$universita";
                         ?> </p>
                         
-                        <button class="btn btn-outline-primary"><i class="fa fa-star" aria-hidden="true"></i></button>
-                        <div class="btn btn-outline-primary">Message</button>
                         
-                      </div>
                       <br>
                       <br>
                       <a href="/Studify/modificaProfilo.html"><button type="button" class="btn btn-light" style="background-color:whitesmoke">Modifica Informazioni personali </button></a>
@@ -263,15 +260,26 @@
 
  
       </div>
+      <div class="container">
 
       <div class=" text-center">
-        <br>
-        <br>
-        
-         
-        <h2 data-aos="fade-left"> Documenti e Appunti caricati &#128218</h2>
-      
+      <div data-aos="fade-right" class="container ">
+<div class="jumbotron-fluid" style="background-image:url(/Studify/img/school.jpg)">
+    <br>
+    <br>
+    
+    
+      <div class="text-center">
+        <h3>I tuoi documenti</h3>
+            <br>
+    <br>
       </div>
+
+    </div>
+    </div>
+    <br>
+    <br>
+
 
       <?php
           $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
@@ -446,15 +454,22 @@
         <div class="container">
         
    
-        <a class="btn btn-light btn-block"  style="border-color:lightblue;" href="/Studify/formappunti.php" role="button">Carica Documento</a>
+        <a class="btn btn-light btn-block"  style="border-color:lightgrey;" href="/Studify/formappunti.php" role="button">Carica Documento</a>
 
         <br>
         </div>
         </div>
       </div>             
         <br>   
-    </main>
 
+    </div>
+        </div>
+  </body>
+</head>
+</div>
+
+<br>
+<br>
 
 
 <!---                                   Footer                                     -->

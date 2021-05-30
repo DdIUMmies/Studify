@@ -236,6 +236,7 @@
 
         <hr class="featurette-divider">
 </div>
+				</div>
 
 
 
