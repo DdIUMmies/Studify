@@ -17,6 +17,9 @@
 	<script> src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"</script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"</script>
 
@@ -78,6 +81,10 @@
 <p class="text-center" style="color: aliceblue;">Potenzia al meglio il tuo studio con la raccolta di appunti di Studify!</p>
 
 <div class="bmi">
+<div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+
 <div class="container">
 		<div class= "input-group">
 			<input type="text" id="barraRicerca" class="form-control" placeholder="Cerca Appunti, Lezioni e molto altro...">
@@ -85,7 +92,7 @@
 			<div class ="input-group-btn">
 				      
 				<button style="background-color:navy;"    class="btn btn-lg btn-primary" name="bottoneCerca" type="submit" onclick="ricerca()">Cerca</button>		
-
+				</div>
 			</div>
 			<br>
 			<div class="container" id="elencoRoba" >
@@ -145,8 +152,8 @@
 			<h5 class="card-title">Appunti & Libri</h5>
 			<p class="card-text" > <em>Porta il tuo studio verso un'altra dimensione con la raccolta di appunti universitari Studify!
 				<br>
-				Sfoglia migliaia di documenti di ogni materia e facoltà!.<br>
-				Pensaci, è come avere una biblioteca portatile!</em></p>
+				Sfoglia migliaia di documenti di ogni materia e facoltà!.
+				</em></p>
 				<a href="/Studify/APPUNTI.php" style="background-color:lightgray;" class="btn btn-light">Vai agli appunti</a>
 
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -156,9 +163,8 @@
 		  <img class="card-img-top" src="/Studify/img/home1.png" alt="Card image cap">
 		  <div class="card-body">
 			<h5 class="card-title">Videolezioni</h5>
-			<p class="card-text"><em>Ti presentiamo la nostra nuova sezione dedicata alle videolezioni tenute da professionisti di tutto il mondo!<br>
-			Il bello è che sono visionabili comodamente da casa. <br>
-		cosa aspetti, entra subito!</em>  </p>
+			<p class="card-text"><em>Ti presentiamo la nostra nuova sezione dedicata alle videolezioni selezionate direttamente dalla nostra community.
+		Cosa aspetti, entra subito!</em>  </p>
 		<br>
 		<a href="videoinfo.html" class="btn btn-light" style="background-color:lightgrey" >Videolezioni</a>
 			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -172,9 +178,7 @@
 									prenderti una pausa e fare amicizia nella "terrazza virtuale". Potrai studiare in compagnia 
 									anche comodamente dal tuo dispositivo.
 			</em></p>
-			<br>
-			<br>
-			<br>
+			
 
 			
 			<a href="https://discord.gg/hrwyUy7G9v" class="btn btn-light" style="background-color:lightgray;">Vai al Server</a>
@@ -198,23 +202,32 @@
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading" data-aos="slide-right"  >Migliora il tuo workflow </h2>
-            <p class="lead" data-aos="slide-right">Da oggi cambia il modo di studiare, segui le videolezioni online, sfoglia migliaia di documenti e mettiti alla prova con i tuoi compagni! </p>
+            <p class="lead" data-aos="slide-right">Da oggi cambia il modo di studiare, segui le videolezioni online, sfoglia migliaia di documenti e mettiti alla prova con i tuoi compagni!
+			Ti presentiamo la piu grande raccolta di appunti offerta da una community italiana.
+					Completamente gratuita e visionabile dal tuo account.
+					Potrai finalmente avere tra le mani tutto ciò di cui avevi bisogno per affrontare i tuoi esami.
+					Non accontentarti di un misero 18 scegli la raccolta Studify! </p>
           </div>
           <div class="col-md-5">
             <img  data-aos="zoom-in-up"class="featurette-image img-fluid mx-auto" src="/Studify/img/ragazzoimmage.jpg" alt="Generic placeholder image">
           </div>
         </div>
 	</div>
-	
-
         <hr class="featurette-divider">
 		
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-				<hr data-aos="slide-right">
-            <h2 data-aos="slide-left" class="featurette-heading">L'unico ed inimitabile</h2>
-            <p  data-aos="slide-left" class="lead">Studify vanta la più grande raccolta di documenti online di ogni facoltà!.</p>
+				
+            <h2 data-aos="slide-left" class="featurette-heading">Studiare non è mai stato cosi social!</h2>
+            <p  data-aos="slide-left" class="lead">La nostra community vanta un gran numero di studenti attivi in tutta italia.
+				Abbiamo studenti da ogni parte di italia di qualsiasi facoltà.
+				Puoi fare amicizia con loro oppure crearti un gruppo di studio indipendente.
+				Inoltre disponiamo di stanze Discord di ogni materia nelle quali potrai confrontarti con colleghi provenienti da ogni parte di italia.
+			
+			</p>
+			<a  data-aos="zoom-in-up" href="https://discord.gg/hrwyUy7G9v" class="btn btn-light" style="background-color:lightgrey" >Entra</a> 
+
           </div>
           <div class="col-md-5 order-md-1">
             <img  data-aos="zoom-out-right" class="featurette-image img-fluid mx-auto" src="/Studify/img/student-school-boy-studying-computer-online-lesson-education-vector-concept-student-school-boy-studying-computer-114522764.jpg" alt="Generic placeholder image">
@@ -320,3 +333,16 @@
 
 	});
 	</script>
+
+
+
+<script>
+    $(document).ready(function(){
+      $(".btn1").click(function(){
+        $("pp").hide(1000);
+      });
+      $(".btn2").click(function(){
+        $("pp").show(1000);
+      });
+    });
+    </script>
