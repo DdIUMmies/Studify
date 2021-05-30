@@ -51,11 +51,14 @@
     $codice_corso_laurea=$_POST['codice_corso_laurea'];
     $materia=$_POST['materia'];
     $descrizione=$_POST['descrizione_documento'];
-    $file=$_FILES['userfile'];
-    $utente=$_POST['utente'];
+    $file_name=$_FILES['userfile']['name'];
+    $file_tmp_name=$_FILES['userfile']['tmp_name'];
+    $utente=$_SESSION['username'];
 
-    $insert_into_db = pg_query($dbconn,"INSERT INTO appunti (materia, nome_documento, documento, descrizione, categoria, codice_corso_laurea,utente)
-                            VALUES ('$materia','$titolo','$file','$descrizione','$categoria','$codice_corso_laurea','$utente')");
+	move_uploaded_file($file_tmp_name, $file_name);
+
+    $insert_into_db = pg_query($dbconn,"INSERT INTO appunti (materia, nome_documento, descrizione, categoria, codice_corso_laurea,utente,nome_file)
+                            VALUES ('$materia','$titolo','$descrizione','$categoria','$codice_corso_laurea','$utente','$file_name')");
     if($insert_into_db){
         header("Location: profile.php");
     } else{
