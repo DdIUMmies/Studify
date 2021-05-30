@@ -271,12 +271,17 @@
 
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" >Visualizza</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Modifica</button>
-                      <div>
-                      <i class="fa fa-heart"></i>
-                      </div>
-                                          
+                      <button type="button" class="btn btn-sm btn-outline-secondary" >
+                        <?php 
+                          $query_file="SELECT * FROM appunti app WHERE app.nome_documento='$titolo_1[0]'";
+                          $result0=pg_query($dbconn,$query_file);
+                          $riga=pg_fetch_array($result0);
+                          $nome_file=$riga['nome_file'];
+                          echo "<a href=\"$nome_file\">Visualizza </a>";
+                        ?>
+                      </button>
+                    <div>
+                  </div>
 
                     </div>
                     <small class="text-muted">
@@ -308,11 +313,17 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                      
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Visualizza</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Modifica</button>
-                      <button><i onclick="myFunction(this)" class="fa fa-thumbs-up" style="color: blue; background-color: white;"></i></button>
-                      
+                      <button type="button" class="btn btn-sm btn-outline-secondary">
+                        <?php 
+                          $query_file="SELECT * FROM appunti app WHERE app.nome_documento='$titolo_2[0]'";
+                          $result0=pg_query($dbconn,$query_file);
+                          $riga=pg_fetch_array($result0);
+                          $nome_file=$riga['nome_file'];
+                          echo "<a href=\"$nome_file\">Visualizza </a>";
+                        ?>
+                      </button>
                     </div>
+
                     <small class="text-muted">
                     <?php $query_categoria_2="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
                     $result5=pg_query($dbconn,$query_categoria_2);
@@ -343,11 +354,17 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                      
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Visualizza</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Modifica</button>
-                      <button><i onclick="myFunction(this)" class="fa fa-thumbs-up" style="color: blue; background-color: white;"></i></button>
-                      
+                      <button type="button" class="btn btn-sm btn-outline-secondary">
+                      <?php 
+                          $query_file="SELECT * FROM appunti app WHERE app.nome_documento='$titolo_3[0]'";
+                          $result0=pg_query($dbconn,$query_file);
+                          $riga=pg_fetch_array($result0);
+                          $nome_file=$riga['nome_file'];
+                          echo "<a href=\"$nome_file\">Visualizza </a>";
+                        ?>
+                      </button>
                     </div>
+
                     <small class="text-muted">
                     <?php $query_categoria_3="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
                     $result8=pg_query($dbconn,$query_categoria_3);

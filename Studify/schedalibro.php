@@ -1,3 +1,7 @@
+<?php $dbconn= pg_connect("host=localhost port=5432
+    dbname=StudifyDB
+    user=postgres password=password")
+    or die('Impossibile connettersi: '.pg_last_error());?>
 <?php
   session_start();
 
@@ -65,14 +69,24 @@
 </nav>
 
 <br>
-        <title>Title of the document</title>
         <br>
         <div class="container">
         <a href="/Studify/profile.php"><button type="button-" class="btn btn-light"> ◀ Torna Indietro </button></a>
         <br>
         <br>
-        <h1>Bitcoin and Criptocurrency</h1>
-        <p class="card-text"><small class="text-muted">Inserito da "Alessandro"</small></p>
+        <h1>
+		<?php $query_titolo="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result=pg_query($dbconn,$query_titolo);
+                    $titolo=pg_fetch_array($result,0,PGSQL_NUM);
+                    echo $titolo[0];
+		?>
+		</h1>
+        <p class="card-text"><small class="text-muted">Inserito da 
+			<?php	$query_utente="SELECT utente FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result1=pg_query($dbconn,$query_utente);
+                    $utente=pg_fetch_array($result1,0,PGSQL_NUM);
+                    echo $utente[0];
+			?></small></p>
         </div>
         <br>
         <br>
@@ -80,25 +94,36 @@
     
 
 <div class="container">
-    <embed src="img/bitcoin_it (1).pdf#toolbar=0" type="application/pdf" width="100%" height="600px"/>
+    <!-- <embed src=echo "$file[0]" type="application/pdf" width="100%" height="600px"/> -->
+	<?php 
+			$query_file="SELECT * FROM appunti app WHERE  app.materia='Interazione Uomo-Macchina'";
+			$result0=pg_query($dbconn,$query_file);
+			$riga=pg_fetch_array($result0);
+			$nome_file=$riga['nome_file'];
+			echo "<a href=\"$nome_file\">Scarica file</a>";
+	?>
+	
     </div>"
     
 <div class="container">
     
-  <p><a href="/Studify/img/bitcoin_it (1).pdf">Scarica doucumento</a>.</p>
+  <p><a href=/"$file[0]/">Scarica doucumento</a>.</p>
 
 
   <h3>Descrizione</h3>
   <!---da inserire lato server-->
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server.
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server.
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  Ragazzi qui dentro andra la descrizione caricata dalla form lato server
-  <p class="card-text"><small class="text-muted">Ultima modifica: Oggi</small></p>
+  <?php $query_descr="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result2=pg_query($dbconn,$query_descr);
+                    $descr=pg_fetch_array($result2,0,PGSQL_NUM);
+                    echo $descr[0];
+  ?>
+  <p class="card-text"><small class="text-muted">
+  <?php $query_categoria="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result3=pg_query($dbconn,$query_categoria);
+                    $categoria=pg_fetch_array($result3,0,PGSQL_NUM);
+                    echo $categoria[0];
+  ?>
+  </small></p>
 </div>
 <br>
 <br>
