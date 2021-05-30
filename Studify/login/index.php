@@ -45,7 +45,7 @@
 	  <li class="nav-item ">
 		<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
 	  <li class="nav-item ">
-		<a class="nav-link" href="#">Lavora con noi</a></li>
+		<a class="nav-link" href="../chiSiamo.html">Chi Siamo</a></li>
 	</ul>
 </nav>
 <br>
