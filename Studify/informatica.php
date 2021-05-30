@@ -142,7 +142,7 @@
 <div class="jumbotron-fluid" data-aos="zoom-in-out">
 <div class=" text-center" data-aos="slide-right">
 <h3>E'un po silenzioso qui...</h3>
-<a href="/Studify/formappunti.html"><button type="button" class="btn btn-light">Aggiungi i tuoi Appunti</button></a>
+<a href="/Studify/formappunti.php"><button type="button" class="btn btn-light">Aggiungi i tuoi Appunti</button></a>
 </div>
 </div>
 

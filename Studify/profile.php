@@ -381,7 +381,7 @@
         <div class="container">
         
    
-        <a class="btn btn-light btn-block"  style="border-color:lightblue;" href="/Studify/formappunti.html" role="button">Carica Documento</a>
+        <a class="btn btn-light btn-block"  style="border-color:lightblue;" href="/Studify/formappunti.php" role="button">Carica Documento</a>
 
         <br>
         </div>
