@@ -1,5 +1,10 @@
 <?php
   session_start();
+
+  $dbconn= pg_connect("host=localhost port=5432
+    dbname=StudifyDB
+    user=postgres password=password")
+    or die('Impossibile connettersi: '.pg_last_error());
 ?>
 
 <!DOCTYPE html>
@@ -89,15 +94,43 @@
     <div class ="card ">
         <div class="row">
             <div class="col-md-4">
-                <img src="/Studify/img/shitcoin.jpg" class="img-fluid">
+                <img src="/Studify/img/PDF_file_icon.jpg" class="img-fluid">
             </div>
             <div class="col-md-8">
-                <h3>Bitocoin and Criptocurrency </h3>
+                <h3>
+				<?php $query_titolo_1="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result=pg_query($dbconn,$query_titolo_1);
+                    $titolo_1=pg_fetch_array($result,0,PGSQL_NUM);
+                    echo $titolo_1[0];?>
+				</h3>
                 <p>
-                    Questa parte è una piccola descrizione lato server ? Questa parte è una piccola descrizione lato server ? Questa parte è una piccola descrizione lato server ? Questa parte è una piccola descrizione lato server ?
-            	</p>
-                <a href="/Studify/schedalibro.php" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Vedi</a>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+				<?php $query_descr_1="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result1=pg_query($dbconn,$query_descr_1);
+                    $descr_1=pg_fetch_array($result1,0,PGSQL_NUM);
+                    echo $descr_1[0];?>
+				</p>
+				<?php 
+					$query_file="SELECT * FROM appunti app WHERE app.nome_documento='$titolo_1[0]'";
+					$result0=pg_query($dbconn,$query_file);
+					$riga=pg_fetch_array($result0);
+					$nome_file=$riga['nome_file'];
+					echo "<a href=\"$nome_file\">Visualizza </a>";
+			?>
+                
+            <p class="card-text"><small class="text-muted">
+			<?php $query_categoria_1="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result2=pg_query($dbconn,$query_categoria_1);
+                    $categoria_1=pg_fetch_array($result2,0,PGSQL_NUM);
+                    echo $categoria_1[0];?>
+			</small></p>
+			<div>
+			<small class="text-muted">Caricato da:
+			<?php $query_utente_up="SELECT utente FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    $result3=pg_query($dbconn,$query_utente_up);
+                    $utente_up=pg_fetch_array($result3,0,PGSQL_NUM);
+                    echo $utente_up[0];?>
+			</small>
+			</div>
             </div>
         </div>
         </div>
