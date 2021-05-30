@@ -100,7 +100,6 @@
       <select class="custom-select" name ="categoria" type=" text" required>
         <option value="">Categoria Documento </option>
         <option value="Libro">Libro</option>
-        <option value="Videolezione">Videolezione</option>
         <option value="Appunti">Appunti</option>
       </select>
     </div>

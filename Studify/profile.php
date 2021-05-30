@@ -7,6 +7,7 @@
     dbname=StudifyDB
     user=postgres password=password")
     or die('Impossibile connettersi: '.pg_last_error());?>
+
 <!DOCTYPE html >
 <head>
   <head>
@@ -282,7 +283,8 @@
 
 
       <?php
-          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
+          $utente=$_SESSION['username'];
+          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente='$utente'";
           $ris=pg_query($dbconn, $query_check);
           $num=pg_num_rows($ris);
 
@@ -302,13 +304,14 @@
                 <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg"  alt="Basi di Dati ">
 
                 <div class="card-body">
-                  <h5 ><?php $query_titolo_1="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                  <h5 ><?php 
+                    $query_titolo_1="SELECT nome_documento FROM appunti app WHERE app.utente='$utente' ORDER BY id DESC";
                     $result=pg_query($dbconn,$query_titolo_1);
                     $titolo_1=pg_fetch_array($result,0,PGSQL_NUM);
                     echo $titolo_1[0];?></p></h5>
 
                   <p class="card-text">
-                  <?php $query_descr_1="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                  <?php $query_descr_1="SELECT descrizione FROM appunti app WHERE app.utente='$utente' ORDER BY id DESC";
                     $result1=pg_query($dbconn,$query_descr_1);
                     $descr_1=pg_fetch_array($result1,0,PGSQL_NUM);
                     echo $descr_1[0];?></p>
@@ -330,7 +333,7 @@
 
                     </div>
                     <small class="text-muted">
-                    <?php $query_categoria_1="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    <?php $query_categoria_1="SELECT categoria FROM appunti app WHERE app.utente='$utente' ORDER BY id DESC";
                     $result2=pg_query($dbconn,$query_categoria_1);
                     $categoria_1=pg_fetch_array($result2,0,PGSQL_NUM);
                     echo $categoria_1[0];?></small>
@@ -342,11 +345,11 @@
             
             <div class="col-md-4">
             <?php
-          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
+          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente='$utente'";
           $ris=pg_query($dbconn, $query_check);
           $num=pg_num_rows($ris);
 
-          if ($num<=1) {
+          if ($num<=2) {
             echo ("");
           }
 
@@ -355,13 +358,13 @@
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg" alt="Ingegneria del software">
                 <div class="card-body">
-                  <h5><?php $query_titolo_2="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                  <h5><?php $query_titolo_2="SELECT nome_documento FROM appunti app WHERE app.utente='$utente' ORDER BY id DESC";
                     $result3=pg_query($dbconn,$query_titolo_2);
                     $titolo_2=pg_fetch_array($result3,1,PGSQL_NUM);
                     echo $titolo_2[0];?></h5>
 
                   <p class="card-text">
-                  <?php $query_descr_2="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                  <?php $query_descr_2="SELECT descrizione FROM appunti app WHERE app.utente='$utente' ORDER BY id DESC";
                     $result4=pg_query($dbconn,$query_descr_2);
                     $descr_2=pg_fetch_array($result4,1,PGSQL_NUM);
                     echo $descr_2[0];?>
@@ -381,7 +384,7 @@
                     </div>
 
                     <small class="text-muted">
-                    <?php $query_categoria_2="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    <?php $query_categoria_2="SELECT categoria FROM appunti app WHERE app.utente='$utente' ORDER BY id DESC";
                     $result5=pg_query($dbconn,$query_categoria_2);
                     $categoria_2=pg_fetch_array($result5,1,PGSQL_NUM);
                     echo $categoria_2[0];?>
@@ -394,11 +397,11 @@
 
             <div class="col-md-4">
             <?php
-          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
+          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente='$utente'";
           $ris=pg_query($dbconn, $query_check);
           $num=pg_num_rows($ris);
 
-          if ($num<=2) {
+          if ($num<=4) {
             echo ("");
           }
 
@@ -407,13 +410,13 @@
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg" alt="Ingegneria del software">
                 <div class="card-body">
-                  <h5><?php $query_titolo_3="SELECT nome_documento FROM appunti app, utenti u WHERE  app.utente=u.username";
+                  <h5><?php $query_titolo_3="SELECT nome_documento FROM appunti app WHERE app.utente='$utente' ORDER BY id DESC";
                     $result6=pg_query($dbconn,$query_titolo_3);
                     $titolo_3=pg_fetch_array($result6,2,PGSQL_NUM);
                     echo $titolo_3[0];?></h5>
 
                   <p class="card-text">
-                  <?php $query_descr_3="SELECT descrizione FROM appunti app, utenti u WHERE  app.utente=u.username";
+                  <?php $query_descr_3="SELECT descrizione FROM appunti app WHERE app.utente='$utente' ORDER BY id DESC";
                     $result7=pg_query($dbconn,$query_descr_3);
                     $descr_3=pg_fetch_array($result7,2,PGSQL_NUM);
                     echo $descr_3[0];?>
@@ -433,7 +436,7 @@
                     </div>
 
                     <small class="text-muted">
-                    <?php $query_categoria_3="SELECT categoria FROM appunti app, utenti u WHERE  app.utente=u.username";
+                    <?php $query_categoria_3="SELECT categoria FROM appunti app WHERE app.utente='$utente' ORDER BY id DESC";
                     $result8=pg_query($dbconn,$query_categoria_3);
                     $categoria_3=pg_fetch_array($result8,2,PGSQL_NUM);
                     echo $categoria_3[0];?>
@@ -442,6 +445,7 @@
                   </div>
                 </div>
               </div>
+              
             </div>
 
             <?php
