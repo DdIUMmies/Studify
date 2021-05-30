@@ -91,6 +91,18 @@
     <a href="/Studify/videoinfo.html"><button type="button-" class="btn btn-light"> Videolezioni 💻</button></a>
     <br>
     <br>
+
+	<?php
+          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
+          $ris=pg_query($dbconn, $query_check);
+          $num=pg_num_rows($ris);
+
+          if ($num==0 || $num==-1) {
+            echo ("");
+          }
+
+          else {
+                ?>
     <div class ="card ">
         <div class="row">
             <div class="col-md-4">
@@ -137,6 +149,9 @@
 
       </nav>
 </div>
+<?php
+		  } 
+?>
 <br>
 <br>
 <div class="jumbotron-fluid" data-aos="zoom-in-out">
