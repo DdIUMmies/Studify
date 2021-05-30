@@ -255,7 +255,7 @@
           $num=pg_num_rows($ris);
 
           if ($num==0 || $num==-1) {
-            echo ("Non hai ancora caricato nulla!");
+            echo ("");
           }
 
           else {
@@ -315,7 +315,7 @@
           $num=pg_num_rows($ris);
 
           if ($num<=1) {
-            echo ("Carica subito altri documenti!");
+            echo ("");
           }
 
           else {
