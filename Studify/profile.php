@@ -41,7 +41,7 @@
 	<div class="collapse navbar-collapse" id="collapseResponsive"></div>
 	<ul class="navbar-nav ml-auto"> <!--per fare le scritte vicino la home-->
 		<li class="nav-item ">
-			<a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+			<a class="nav-link" href="index.php">Home</a></li>
 				
 		<li class="nav-item ">
 			<a class="nav-link" href="APPUNTI.php">Appunti</a></li>
@@ -52,10 +52,10 @@
 						
 						?>
 					    <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
+							<a class="nav-link active dropdown-toggle" href="profile.php" id="navbarDropdownAppunti" role="button" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false"> <?php echo($_SESSION['username']) ?> </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownAppunti">
-							<a class="dropdown-item" href="profile.php"> Il tuo profilo </a>
+							<a class="dropdown-item " href="profile.php"> Il tuo profilo </a>
 						</li>
 						<li class="nav-item active">
 							  <form action="logout.php" method="post"> <input type="submit" value="Esci" class="btn btn-primary" style="background-color: navy;"/></form></li>
