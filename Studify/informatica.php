@@ -111,13 +111,15 @@
 					</div>
 					<div class="col-md-8">
 						<h3>
-						<?php $query_titolo_1="SELECT nome_documento FROM appunti ORDER BY id DESC";
+						<?php $query_titolo_1="SELECT nome_documento, codice_corso_laurea FROM appunti app WHERE app.codice_corso_laurea='L-31 Classe delle Lauree in Scienze e Tecnologie Informatiche' 
+							OR app.codice_corso_laurea='L-08 Classe delle Lauree in Ingegneria dell Informazione' ORDER BY id DESC";
 							$result=pg_query($dbconn,$query_titolo_1);
 							$titolo_1=pg_fetch_array($result,$i-1,PGSQL_NUM);
 							echo $titolo_1[0];?>
 						</h3>
 						<p>
-						<?php $query_descr_1="SELECT descrizione FROM appunti ORDER BY id DESC";
+						<?php $query_descr_1="SELECT descrizione, codice_corso_laurea FROM appunti app WHERE app.codice_corso_laurea='L-31 Classe delle Lauree in Scienze e Tecnologie Informatiche' 
+							OR app.codice_corso_laurea='L-08 Classe delle Lauree in Ingegneria dell Informazione' ORDER BY id DESC";
 							$result1=pg_query($dbconn,$query_descr_1);
 							$descr_1=pg_fetch_array($result1,$i-1,PGSQL_NUM);
 							echo $descr_1[0];?>
@@ -131,14 +133,16 @@
 					?>
 						
 					<p class="card-text"><small class="text-muted">
-					<?php $query_categoria_1="SELECT categoria FROM appunti ORDER BY id DESC";
+					<?php $query_categoria_1="SELECT categoria, codice_corso_laurea FROM appunti app WHERE app.codice_corso_laurea='L-31 Classe delle Lauree in Scienze e Tecnologie Informatiche' 
+						OR app.codice_corso_laurea='L-08 Classe delle Lauree in Ingegneria dell Informazione' ORDER BY id DESC";
 							$result2=pg_query($dbconn,$query_categoria_1);
 							$categoria_1=pg_fetch_array($result2,$i-1,PGSQL_NUM);
 							echo $categoria_1[0];?>
 					</small></p>
 					<div>
 					<small class="text-muted">Caricato da:
-					<?php $query_utente_up="SELECT utente FROM appunti ORDER BY id DESC";
+					<?php $query_utente_up="SELECT utente, codice_corso_laurea FROM appunti app WHERE app.codice_corso_laurea='L-31 Classe delle Lauree in Scienze e Tecnologie Informatiche' 
+						OR app.codice_corso_laurea='L-08 Classe delle Lauree in Ingegneria dell Informazione' ORDER BY id DESC";
 							$result3=pg_query($dbconn,$query_utente_up);
 							$utente_up=pg_fetch_array($result3,$i-1,PGSQL_NUM);
 							echo $utente_up[0];?>
