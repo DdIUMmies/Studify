@@ -18,7 +18,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"</script>
-    
+        <script>
+          src="https://code.jquery.com/jquery-1.12.4.min.js"
+        </script>    
         <link href="style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
 </head>
@@ -145,13 +147,24 @@
             <h3>Dove Siamo </h3>
             <br>
             </div>
-        </div>
+          </div>
+        <br>
+        <br>
+
+        <div class="text-center">
+        
+        <h6 class="lead">Ci puoi trovare al dipartimento di informatica dell'università "La Sapienza"(vedi mappa).</h6>
+      </div>
+       
+      
         <br>
         <br>
 
         
-        <div class="btn2"><button type="button" class="btn btn-light">Mostra la mappa</button></div>   <br>  
-        <div class="btn1" ><button type="button" class="btn btn-light">Nascondi la mappa</button></div> 
+ <div class="text-center">
+        <div class="btn1" ><button type="button" class="btn btn-light">Mostra/Nascondi Mappa</button></div> 
+      </div>
+
         
         
  
@@ -267,7 +280,7 @@
    });
    </script>
 
-
+<!--
 <script>
     $(document).ready(function(){
       $(".btn1").click(function(){
@@ -277,6 +290,17 @@
         $("iframe").show(1000);
       });
     });
+    </script>-->
+
+
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".btn1").on("click",function(){
+          $(".map").toggleClass("map--open");
+        });
+
+      });
     </script>
 
 
