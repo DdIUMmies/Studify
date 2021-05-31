@@ -281,7 +281,7 @@
     <br>
     <br>
 
-
+<!-- -->
       <?php
           $utente=$_SESSION['username'];
           $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente='$utente'";
@@ -345,15 +345,15 @@
             
             <div class="col-md-4">
             <?php
-          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente='$utente'";
+          $query_check="SELECT * FROM appunti app WHERE app.utente='$utente'";
           $ris=pg_query($dbconn, $query_check);
           $num=pg_num_rows($ris);
 
-          if ($num<=2) {
+          if ($num<=1) {
             echo ("");
           }
 
-          else {
+          else { 
                 ?>
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="/Studify/img/PDF_file_icon.jpg" alt="Ingegneria del software">
@@ -397,11 +397,11 @@
 
             <div class="col-md-4">
             <?php
-          $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente='$utente'";
+          $query_check="SELECT * FROM appunti app WHERE app.utente='$utente'";
           $ris=pg_query($dbconn, $query_check);
           $num=pg_num_rows($ris);
 
-          if ($num<=4) {
+          if ($num<=2) {
             echo ("");
           }
 
@@ -451,6 +451,7 @@
             <?php
           }}}
     ?>
+    <!-- -->
         </div>
 
      
