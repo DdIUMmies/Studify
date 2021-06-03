@@ -94,7 +94,6 @@
     
 
 <div class="container">
-    <!-- <embed src=echo "$file[0]" type="application/pdf" width="100%" height="600px"/> -->
 	<?php 
 			$query_file="SELECT * FROM appunti app WHERE  app.materia='Interazione Uomo-Macchina'";
 			$result0=pg_query($dbconn,$query_file);

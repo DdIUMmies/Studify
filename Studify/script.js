@@ -1,3 +1,6 @@
+
+/* Funzione per la barra di ricerca nella home */
+
 function ricerca() {
     var input; 
     var filtro;

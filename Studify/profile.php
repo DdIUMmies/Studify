@@ -1,12 +1,13 @@
 <?php
   session_start();
 
-  if(isset($_SESSION['id'])) {
+  if(isset($_SESSION['id'])) { // Se l'utente è loggato, mostra il profilo
     ?>
     <?php $dbconn= pg_connect("host=localhost port=5432
     dbname=StudifyDB
     user=postgres password=password")
     or die('Impossibile connettersi: '.pg_last_error());?>
+
 
 <!DOCTYPE html >
 <head>
@@ -113,7 +114,7 @@
 
         </div>
      
-            <!-- /Breadcrumb -->
+            <!-- Breadcrumb -->
       
             <div class="row gutters-sm">
               <div class="col-md-4 mb-3">
@@ -245,21 +246,10 @@
                     
                   </div>
                 </div>
-                
-
-
-
-
-             
             </ul>
-            
           </div>
           </div>
-
-
     </div>
-
- 
       </div>
       <div class="container">
 
@@ -281,7 +271,7 @@
     <br>
     <br>
 
-<!-- -->
+<!-- Visualizza i documenti caricati dall'utente -->
       <?php
           $utente=$_SESSION['username'];
           $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente='$utente'";
@@ -451,10 +441,7 @@
             <?php
           }}}
     ?>
-    <!-- -->
         </div>
-
-     
 
         <div class="container">
         
@@ -477,7 +464,7 @@
 <br>
 
 
-<!---                                   Footer                                     -->
+<!--- Footer -->
 <footer class="bg-light text-center text-black" style="background-color: antiquewhite;">
 	<div class="container p-4">
 
@@ -518,7 +505,7 @@
 		></a>
 	  </section>
   
-<!--                  Newsletter                -->
+<!--  Newsletter  -->
 	  <section class="">
 		<form action=""> 
 		  <div class="row d-flex justify-content-center">
@@ -552,7 +539,7 @@
 		</p>
 	  </section>
 
-<!--             Copyright                 -->
+<!-- Copyright -->
 	<div class="text-center p-3" >
 	  © 2021 Copyright:
 	  <a class="text-dark" href="https://mdbootstrap.com/">Studify.it</a>
@@ -577,7 +564,7 @@
 
     <?php
 
-} else {
+} else { // Se l'utente non è loggato, reindirizzalo 
     header("Location: noAccess.html");
     ?>
     <form action="login/index.php" method="post">
@@ -586,22 +573,6 @@
     <?php
 }
 ?>
-
-<!----JAVASCRIPT & JQUERY-->
-
-<script>
-
-$(".star.glyphicon").click(function() {
-  $(this).toggleClass("glyphicon-star glyphicon-star-empty");
-});
-
-$(".heart.fa").click(function() {
-  $(this).toggleClass("fa-heart fa-heart-o");
-});
-</script>
-
-
-
 
 <script>
 	 AOS.init({

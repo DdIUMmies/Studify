@@ -1,25 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 
-
-
-
-
-
-
-
-
 /*---Media Queries --*/
 @media (max-width: 992px) {
 
   }
 @media (max-width: 768px) {
-  
-}
+  nav ul li {
+    display:block;
+  }
+  .nav-item{
+    position:static;
+    box-shadow:nonee;
+    background-color: transparent;
+  }
+  .card h-h100{
+    position: static;
+    display: block;
+  }
+  .btn{
+    height: auto;
+
+  }
+  .btn-menu{
+    text-decoration:none;
+    color:lightgrey;
+    padding:3px;
+    margin:5px;
+    font-size:200%;
+    border:1px solid white;
+    border-radius: 3px;
+
+  }
+
+
+  }
+
 @media (max-width: 576px) {
   
 }
-
 
 /*---Firefox Bug Fix --*/
 .carousel-item {
@@ -33,10 +52,7 @@
    height: 400px;
 }
 
-
-
-
-/*--- Fixed Background Image --*/
+/*--- Per fissare le immagini --*/
 figure {
   position: relative;
   width: 100%;
@@ -65,19 +81,11 @@ figure {
           transform: translateZ(0);
   will-change: transform;
 }
-/*--- Bootstrap Padding Fix --*/
+/*--- Padding --*/
 [class*="col-"] {
     padding:1rem;
 }
 
-
-
-/*body{
-  background-image: url('img/mac.png');
-
-
-
-}*/
 
 .text-center {
   text-align: center;
@@ -98,13 +106,12 @@ figure {
 }
 
 .card {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    /*margin-bottom: 10px; /* Added */
+    margin: 0 auto;
+    float: none; 
     image-resolution:inherit;
 }
 
-.bmi {         /*my additional class name -for card*/
+.bmi { 
   margin-left: 10%;      
   margin-right: 10%;
   margin-top: 5%;
@@ -121,8 +128,6 @@ figure {
   align-items:center;
 }
 
-
-
 .container i{
   font-size:5rem;
   transition: .4s;
@@ -130,40 +135,6 @@ figure {
 .container :hover i{
   color: #f50057;
 }
-
-
-
-
-
-@keyframes heart {
-  0%{
-    transform: rotate(0deg) scale(1.7);
-  }
-  100%{
-    transform: rotate(0deg) scale(1);
-  }
-
-}
-
-
-
-
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
 
 
 

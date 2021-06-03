@@ -93,16 +93,17 @@
     <br>
 
 	<?php
+			// Controlla se ci sono documenti caricati
           $query_check="SELECT * FROM appunti app, utenti u WHERE app.utente=u.username";
           $ris=pg_query($dbconn, $query_check);
           $num=pg_num_rows($ris);
 
-          if ($num==0 || $num==-1) {
+          if ($num==0 || $num==-1) { // Se non ci sono
             echo ("");
           }
 
-          else { 
-			  for($i=1; $i<=$num; $i++) {
+          else { // Se ci sono, visualizza tutti i documenti nel database in delle card
+			  for($i=1; $i<=$num; $i++) { 
                 ?>
 			<div class ="card ">
 				<div class="row">
@@ -173,7 +174,7 @@
 <br>
 
 
-<!---                                   Footer                                     -->
+<!---  Footer  -->
 <footer class="bg-light text-center text-black" style="background-color: antiquewhite;">
 	<div class="container p-4">
 	  <!-- Sezione: Social media -->
@@ -213,7 +214,7 @@
 		></a>
 	  </section>
   
-<!--                  Newsletter                -->
+<!-- Newsletter -->
 	  <section class="">
 		<form action=""> 
 		  <div class="row d-flex justify-content-center">
@@ -247,7 +248,7 @@
 		</p>
 	  </section>
 
-<!--             Copyright                 -->
+<!-- Copyright -->
 	<div class="text-center p-3" >
 	  © 2021 Copyright:
 	  <a class="text-dark" href="https://mdbootstrap.com/">Studify.it</a>

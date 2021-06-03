@@ -85,9 +85,10 @@
     
       
    
-
+   <!-- Form per caricare i libri/appunti -->
   <form method="POST" action="upload.php" enctype="multipart/form-data">
-    <div class="mb-3">
+    
+  <div class="mb-3">
       <label for="validationTextarea">Inserisci un titolo</label>
       <input type="text" name="nome_documento" placeholder="Nome" class="form-control"required>
       <div class="invalid-feedback">
@@ -103,7 +104,7 @@
         <option value="Appunti">Appunti</option>
       </select>
     </div>
-
+   
     <div class="form-group"> 
       <label for="validationTextarea">Codice Corso di Caurea</label>
       <select class="custom-select" name ="codice_corso_laurea" type=" text" required>
