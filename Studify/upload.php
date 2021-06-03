@@ -8,7 +8,7 @@
     
 
     // array contenente i tipi di file per cui è possibile fare l'upload
-    $tipi_consentiti = array("pdf","mkv","mp4");
+    $tipi_consentiti = array("pdf");
 
     // dimesione massima del file (circa 400MB)
     $max_byte = 409600000;
